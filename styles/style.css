@@ -1,0 +1,64 @@
+:root {
+  /* Palette BackGroun Colors*/
+  --primari-bg-color: #ffffff;
+  --secondary-bg-color: #f7f7f7;
+  --footer-bg-color: #191c26;
+  /* Palette Text Colors*/
+  --primary-text-color: #555555;
+  --secondary-text-color: #9da4bd;
+  --secondary-text-color-alpha: rgba(157, 164, 189, 0.6);
+  --title-text-color: #303030;
+  --link-text-color: #ff6c00;
+  --white-text-color: #ffffff;
+  --noactive-text-color: rgba(157, 164, 189, 0.4);
+}
+
+body {
+  color: var(--primary-text-color);
+  background-color: var(--primari-bg-color);
+}
+
+/* Скидання налаштувань посилань та списків */
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+/* ТИМЧАСОВО */
+.section-team a:hover {
+  background-color: teal;
+}
+/* КІНЕЦЬ ТИМЧАСОВО */
+
+.header {
+  background-color: var(--footer-bg-color);
+}
+
+.nav a {
+  color: var(--white-text-color);
+}
+.nav a:hover,
+.nav a:focus {
+  color: var(--link-text-color);
+}
+
+.contact .tel {
+  color: var(--white-text-color);
+}
+.contact .tel:hover,
+.contact .tel:focus {
+  color: var(--link-text-color);
+}
+
+.contact .button {
+  color: var(--white-text-color);
+  background-color: var(--footer-bg-color);
+}
+.contact .button:hover,
+.contact .button:focus {
+  background-color: #ff6c00;
+  cursor: pointer;
+}

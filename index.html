@@ -29,28 +29,30 @@
     />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="/styles/style.css" />
     <title>Barbershop</title>
   </head>
   <body>
     <!-- Top Line (navigation) -->
-    <header>
+    <header class="header">
       <a href=""><img src="./images/Logo.png" alt="logo barbershop" /></a>
       <nav>
-        <ul>
+        <ul class="nav">
           <li><a href="#about">About</a></li>
           <li><a href="#prices">Services and prices</a></li>
           <li><a href="#team">Barbers</a></li>
           <li><a href="#contacts">Contacts</a></li>
         </ul>
       </nav>
-      <div>
-        <a href="tel:+380441111111">+38 044 111 11 11</a>
-        <button type="button">Online-booking</button>
+      <div class="contact">
+        <a href="tel:+380441111111" class="tel">+38 044 111 11 11</a>
+        <button type="button" class="button">Online-booking</button>
       </div>
     </header>
     <main>
-      <!-- Header Sidebar -->
-      <aside>
+      <!-- Hero -->
+
+      <section>
         <ul>
           <li>
             <a
@@ -69,32 +71,43 @@
             >
           </li>
         </ul>
-      </aside>
-
-      <!-- Hero -->
-
-      <section>
-        <h2>A hair salon for men in Kyiv</h2>
-        <h1>BarberShop</h1>
-        <p>
-          We are experts in trendy men’s haircuts. We work quickly, carefully
-          and with style.
-        </p>
+        <div>
+          <p>A hair salon for men in Kyiv</p>
+          <h1>BarberShop</h1>
+          <p>
+            We are experts in trendy men’s haircuts. We work quickly, carefully
+            and with style.
+          </p>
+        </div>
+        <ul>
+          <li><button type="button">Back</button></li>
+          <li><button type="button">Forward</button></li>
+        </ul>
       </section>
-      <!--Hero - links between pages -->
-      <ul>
-        <li><a href="">Back</a></li>
-        <li><a href="">Forward</a></li>
-      </ul>
 
       <!-- ABOUT US -->
-
-      <div>
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <section>
-          <h2 id="about">About</h2>
-          <h1>Best Barbershop in your city</h1>
+      <section>
+        <ul class="list">
+          <li class="list-item">
+            <img
+              src="./images/about/about-img-1.jpg"
+              alt="Mustache trim"
+              width="270"
+              height="445"
+            />
+          </li>
+          <li class="list-item">
+            <img
+              src="./images/about/about-img-2.jpg"
+              alt="Men’s haircut"
+              width="270"
+              height="445"
+            />
+          </li>
+        </ul>
+        <div>
+          <p id="about">About</p>
+          <h2>Best Barbershop in your city</h2>
           <p>
             If you want to add more confidence to your image, you should
             definitely visit us.
@@ -107,95 +120,162 @@
             improve everyone who comes to us!
           </p>
           <button type="button">Online-booking</button>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <!-- SERVISES and PRICES -->
 
       <section>
-        <h2 id="prices">spend your time with the best masters</h2>
-        <h1>Services and prices</h1>
-        <ul>
-          <li>Men’s haircut ..........from 200 uah.</li>
-          <li>Mustache trim .........from 200 uah.</li>
-          <li>Beard trim............from 300 uah.</li>
-          <li>Straight razor shave..........from 300 uah.</li>
-        </ul>
-        <ul>
-          <li>Trainee’s haircut.........from 50 uah.</li>
-          <li>Haircut under the nozzle.........from 200 uah.</li>
-          <li>Children’s haircut (0-12 y.o.).........from 300 uah.</li>
-          <li>Camouflage of gray hair.........from 200 uah.</li>
-        </ul>
+        <p id="prices">spend your time with the best masters</p>
+        <h2>Services and prices</h2>
+        <div>
+          <ul>
+            <li>Men’s haircut ..........from 200 uah.</li>
+            <li>Mustache trim .........from 200 uah.</li>
+            <li>Beard trim............from 300 uah.</li>
+            <li>Straight razor shave..........from 300 uah.</li>
+          </ul>
+          <ul>
+            <li>Trainee’s haircut.........from 50 uah.</li>
+            <li>Haircut under the nozzle.........from 200 uah.</li>
+            <li>Children’s haircut (0-12 y.o.).........from 300 uah.</li>
+            <li>Camouflage of gray hair.........from 200 uah.</li>
+          </ul>
+        </div>
         <button type="button">Online-booking</button>
       </section>
 
       <!-- BENEFITS -->
 
       <section>
-        <h2>old traditional school</h2>
-        <h1>Why people come to us?</h1>
-        <p>
-          Only good things are said about us. But it's better to see and feel 1
-          time than read 10 times.
-        </p>
         <ul>
           <li>
-            <h3>600<sup>+</sup></h3>
+            <p>600<sup>&#43;</sup></p>
             <p>Satisfied customers per day</p>
           </li>
           <li>
-            <h3>50<sup>+</sup></h3>
+            <p>50<sup>&#43;</sup></p>
             <p>Awards for excellent service</p>
           </li>
           <li>
-            <h3>20<sup>+</sup></h3>
+            <p>20<sup>&#43;</sup></p>
             <p>Kyiv’s best barbers</p>
           </li>
           <li>
-            <h3>100<sup>+</sup></h3>
+            <p>100<sup>&#43;</sup></p>
             <p>Gifts for regular customers</p>
           </li>
         </ul>
+        <div>
+          <p>old traditional school</p>
+          <h2>Why people come to us?</h2>
+          <p>
+            Only good things are said about us. But it's better to see and feel
+            1 time than read 10 times.
+          </p>
+        </div>
       </section>
 
       <!-- TEAM -->
 
-      <section>
-        <h2 id="team">for true enjoyers of the atmosphere</h2>
-        <h1>Our barbers</h1>
+      <section class="section-team">
+        <p id="team">for true enjoyers of the atmosphere</p>
+        <h2>Our barbers</h2>
         <ul>
           <li>
-            <img src="./images/team/team-img1.jpg" alt="John Smith" />
+            <img
+              src="./images/team/team-img1.jpg"
+              alt="John Smith"
+              width="370"
+              height="346"
+            />
             <h3>John Smith</h3>
             <p>Extreme Barber</p>
             <ul>
-              <li><img src="./images/social/insta.png" alt="Instagram" /></li>
-              <li><img src="./images/social/twitter.svg" alt="Twitter" /></li>
-              <li><img src="./images/social/facebook.png" alt="Facebook" /></li>
-              <li><img src="./images/social/linkedin.svg" alt="LinkedIn" /></li>
+              <li>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><img src="./images/social/insta.png" alt="Instagram"
+                /></a>
+              </li>
+              <li>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><img src="./images/social/twitter.svg" alt="Twitter"
+                /></a>
+              </li>
+              <li>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><img src="./images/social/facebook.png" alt="Facebook"
+                /></a>
+              </li>
+              <li>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><img src="./images/social/linkedin.svg" alt="LinkedIn"
+                /></a>
+              </li>
             </ul>
           </li>
           <li>
-            <img src="./images/team/team-img2.jpg" alt="Michele Doe" />
+            <img
+              src="./images/team/team-img2.jpg"
+              alt="Michele Doe"
+              width="370"
+              height="346"
+            />
             <h3>Michele Doe</h3>
             <p>Extreme Barber</p>
             <ul>
-              <li><img src="./images/social/insta.png" alt="Instagram" /></li>
-              <li><img src="./images/social/twitter.svg" alt="Twitter" /></li>
-              <li><img src="./images/social/facebook.png" alt="Facebook" /></li>
-              <li><img src="./images/social/linkedin.svg" alt="LinkedIn" /></li>
+              <li>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><img src="./images/social/insta.png" alt="Instagram"
+                /></a>
+              </li>
+              <li>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><img src="./images/social/twitter.svg" alt="Twitter"
+                /></a>
+              </li>
+              <li>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><img src="./images/social/facebook.png" alt="Facebook"
+                /></a>
+              </li>
+              <li>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><img src="./images/social/linkedin.svg" alt="LinkedIn"
+                /></a>
+              </li>
             </ul>
           </li>
           <li>
-            <img src="./images/team/team-img3.jpg" alt="Alan Black" />
+            <img
+              src="./images/team/team-img3.jpg"
+              alt="Alan Black"
+              width="370"
+              height="346"
+            />
             <h3>Alan Black</h3>
             <p>Extreme Barber</p>
             <ul>
-              <li><img src="./images/social/insta.png" alt="Instagram" /></li>
-              <li><img src="./images/social/twitter.svg" alt="Twitter" /></li>
-              <li><img src="./images/social/facebook.png" alt="Facebook" /></li>
-              <li><img src="./images/social/linkedin.svg" alt="LinkedIn" /></li>
+              <li>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><img src="./images/social/insta.png" alt="Instagram"
+                /></a>
+              </li>
+              <li>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><img src="./images/social/twitter.svg" alt="Twitter"
+                /></a>
+              </li>
+              <li>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><img src="./images/social/facebook.png" alt="Facebook"
+                /></a>
+              </li>
+              <li>
+                <a href="" target="_blank" rel="noopener noreferrer"
+                  ><img src="./images/social/linkedin.svg" alt="LinkedIn"
+                /></a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -204,71 +284,90 @@
       <!-- GALLERY -->
 
       <section>
-        <h2>in Latin, "barba" means "beard"</h2>
+        <p>in Latin, "barba" means "beard"</p>
+        <h2 hidden>Our gallery</h2>
         <ul>
           <li>
             <img
               src="./images/gallery/gallery-img-1.jpg"
               alt="barber cuts a man"
+              width="270"
+              height="360"
             />
           </li>
           <li>
             <img
               src="./images/gallery/gallery-img-2.jpg"
               alt="barber shaves a man"
+              width="270"
+              height="360"
             />
           </li>
           <li>
             <img
               src="./images/gallery/gallery-img-3.jpg"
               alt="barber wipes man's face with a towel"
+              width="270"
+              height="360"
             />
           </li>
           <li>
             <img
               src="./images/gallery/gallery-img-4.jpg"
               alt="barber cuts a man"
+              width="270"
+              height="360"
             />
           </li>
         </ul>
       </section>
 
-      <!-- FORM for ONLINE-BOOKING -->
+      <!-- FORM for ONLINE-BOOKING  AND   CONTACTS -->
 
-      <form action="/contacts" method="post">
-        <h1>Online-booking</h1>
+      <div>
+        <form action="/contacts" method="post">
+          <h2>Online-booking</h2>
 
-        <label>Name<input type="text" name="first_name" novalidate /></label>
-        <label>Phone<input type="tel" name="phone_number" novalidate /></label>
-        <label
-          >Message
-          <textarea name="message" rows="5"></textarea>
-        </label>
-        <button type="submit">Send</button>
-      </form>
+          <label>Name<input type="text" name="first_name" novalidate /></label>
+          <label
+            >Phone<input type="tel" name="phone_number" novalidate
+          /></label>
+          <label
+            >Message
+            <textarea name="message" rows="5"></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
 
-      <!-- CONTACTS -->
+        <section>
+          <h2 id="contacts">Contacts</h2>
+          <address>
+            <ul>
+              <li>
+                <a
+                  href="https://goo.gl/maps/wuicScCzC82bpD2R9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >st. Vasilkovaya, 7A <br />
+                  Kiev, 08132</a
+                >
+              </li>
+              <li><a href="tel:+380441111111">+38 044 111 11 11</a></li>
+              <li>
+                <a href="mailto:barbershop@email.com">barbershop@email.com</a>
+              </li>
+            </ul>
+          </address>
 
-      <section>
-        <h1 id="contacts">Contacts</h1>
-        <address>
-          <ul>
-            <li>
-              st. Vasilkovaya, 7A <br />
-              Kiev, 08132
-            </li>
-            <li><a href="tel:+380441111111">+38 044 111 11 11</a></li>
-            <li>
-              <a href="mailto:barbershop@email.com">barbershop@email.com</a>
-            </li>
-          </ul>
-        </address>
-        <h2>working hours</h2>
-        <p>
-          Every day from <time datetime="09:00">9:00</time> to
-          <time datetime="22:00">22:00</time>
-        </p>
-      </section>
+          <div>
+            <p>working hours</p>
+            <p>
+              Every day from <time datetime="09:00">9:00</time> to
+              <time datetime="22:00">22:00</time>
+            </p>
+          </div>
+        </section>
+      </div>
 
       <!-- Footer -->
       <footer>
