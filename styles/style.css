@@ -2,7 +2,7 @@
   /* Palette BackGroun Colors*/
   --primari-bg-color: #ffffff;
   --secondary-bg-color: #f7f7f7;
-  --footer-bg-color: #191c26;
+  --footer-bg-color: #3b4464;
   /* Palette Text Colors*/
   --primary-text-color: #555555;
   --secondary-text-color: #9da4bd;
@@ -11,54 +11,505 @@
   --link-text-color: #ff6c00;
   --white-text-color: #ffffff;
   --noactive-text-color: rgba(157, 164, 189, 0.4);
+  /* OTHER */
+  --section-padding: 130px;
 }
 
 body {
   color: var(--primary-text-color);
   background-color: var(--primari-bg-color);
+  font-family: "Open Sans", Raleway, Montserrat, sans-serif;
 }
 
 /* Скидання налаштувань посилань та списків */
 
 a {
   text-decoration: none;
+  color: currentColor;
 }
 ul {
   list-style: none;
 }
-
-/* ТИМЧАСОВО */
-.section-team a:hover {
-  background-color: teal;
+button {
+  padding: 0;
+  margin: 0;
 }
-/* КІНЕЦЬ ТИМЧАСОВО */
+img {
+  display: block;
+}
+
+/* скидаємо MARGIN де це потрібно */
+ul,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+/* КОНТЕЙНЕР */
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* для наглядності */
+  outline: 2px solid black;
+  background-color: tomato;
+}
+
+.section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+/* ХЕДЕР */
 
 .header {
   background-color: var(--footer-bg-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.nav a {
+.nav .link {
   color: var(--white-text-color);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.15;
+  letter-spacing: 0.1em;
 }
 .nav a:hover,
 .nav a:focus {
   color: var(--link-text-color);
 }
 
-.contact .tel {
+.contacts .tel {
   color: var(--white-text-color);
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.15;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  margin-right: 45px;
 }
-.contact .tel:hover,
-.contact .tel:focus {
+.contacts .tel:hover,
+.contacts .tel:focus {
   color: var(--link-text-color);
 }
 
-.contact .button {
+.btn-booking {
   color: var(--white-text-color);
-  background-color: var(--footer-bg-color);
+  background-color: transparent;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  min-width: 160px;
+  min-height: 40px;
+  padding: auto;
+  border: 1px solid var(--link-text-color);
+  border-radius: 20px;
 }
-.contact .button:hover,
-.contact .button:focus {
+.btn-booking:hover,
+.btn-booking:focus {
   background-color: #ff6c00;
   cursor: pointer;
+}
+
+/* FLEX HEADER */
+
+.header-flex {
+  display: flex;
+  align-items: center;
+}
+
+.nav .list {
+  display: flex;
+}
+
+.nav .list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.nav {
+  margin-left: 70px;
+}
+
+.contacts {
+  margin-left: auto;
+}
+
+/* HERO */
+
+.hero {
+  background-color: teal;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.main-title {
+  color: var(--white-text-color);
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+}
+
+.uppertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--secondary-text-color-alpha);
+
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+
+  margin-top: 20px;
+}
+
+.social-list .link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: var(--title-text-color);
+}
+
+.hero .btn {
+  color: var(--white-text-color);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+}
+
+.hero .btn:hover,
+.hero .btn:focus {
+  color: var(--secondary-text-color-alpha);
+}
+
+.hero .group {
+  min-width: 510px;
+  margin-left: 100px;
+}
+
+/* FLEX HERO */
+
+.hero-flex {
+  display: flex;
+  height: 370px;
+}
+.hero-flex .list {
+  align-self: flex-end;
+  margin-left: auto;
+  display: flex;
+}
+.hero-flex .list-item:not(:last-child) {
+  margin-right: 22px;
+}
+
+.hero-flex .social-list {
+  align-self: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80px;
+}
+
+.social-list .list-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* ABOUT */
+
+.about {
+  background-color: #ccc;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.about .btn {
+  margin-top: 40px;
+}
+
+.section-title {
+  font-family: "Raleway";
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: var(--title-text-color);
+}
+
+.desc {
+  margin-top: 20px;
+
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+}
+
+/* FLEX ABOUT */
+
+.about-flex {
+  display: flex;
+}
+
+.about .list {
+  display: flex;
+}
+.about .list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about .group {
+  max-width: 500px;
+  margin-left: 64px;
+}
+
+/* PRICES */
+
+.section-price {
+  background-color: var(--footer-bg-color);
+  padding: 130px 0;
+}
+
+.section-price .uppertitle {
+  color: var(--secondary-text-color-alpha);
+}
+.section-price .section-title {
+  color: var(--white-text-color);
+  margin-bottom: 44px;
+}
+
+.section-price .list {
+  color: var(--secondary-text-color);
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+}
+
+.section-price .btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FLEX PRICE */
+
+.list-group {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.list-group .list {
+  width: calc(100% / 2);
+  padding: 30px 40px;
+}
+
+.list-group .list-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-group .list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* BENEFITS */
+
+.section-benefits {
+  padding: 130px 0;
+
+  /* для наглядності */
+  background-color: teal;
+}
+
+.quantity {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(57 / 42);
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+.quantity sup {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: calc(22 / 16);
+  color: #ff6c00;
+  vertical-align: top;
+}
+
+.desc {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-align: center;
+  color: var(--title-text-color);
+}
+
+.section-benefits .group {
+  width: 500px;
+  margin-left: 130px;
+}
+
+.section-benefits .list {
+  width: 370px;
+}
+
+/* FLEX BENEFITS */
+
+.benefits-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-list {
+  display: flex;
+  height: 100%;
+}
+
+.flex-list .list-item {
+  width: calc(100% / 2);
+}
+
+.flex-item {
+  height: calc(331px / 2);
+}
+
+.item-end {
+  align-self: flex-end;
+}
+
+/* TEAM */
+
+.section-team {
+  padding-top: 130px;
+  padding-bottom: 130px;
+
+  /* для наглядності */
+
+  background-color: #ccc;
+}
+
+.section-team .section-title {
+  margin-bottom: 44px;
+}
+.section-team .uppertitle {
+  color: var(--title-text-color);
+}
+
+.card-title {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.team-name {
+  margin-bottom: 8px;
+
+  color: var(--title-text-color);
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.02em;
+}
+
+.team-position {
+  margin-bottom: 30px;
+
+  color: var(--link-text-color);
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.02em;
+}
+
+/* FLEX TEAM */
+
+.section-team .list {
+  display: flex;
+}
+
+/* .section-team .list-item {
+  width: calc(100% / 3 - 30px);
+} */
+
+.section-team .list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.card-title .socials {
+  display: flex;
+  justify-content: center;
+}
+
+.card-title .social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* GALERY */
+
+.section-galery {
+  padding-top: 130px;
+  padding-bottom: 130px;
+
+  /* для наглядності */
+
+  background-color: rgb(145, 50, 50);
+}
+
+.section-galery .uppertitle {
+  color: var(--title-text-color);
+  margin-bottom: 44px;
+}
+
+/* FLEX GALERY */
+
+.section-galery .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* BOOKING AND CONTACTS */
+
+.group-booking {
+  padding-top: ;
+}
+
+.group-booking .section-title {
+  color: var(--white-text-color);
+  margin-bottom: 44px;
+}
+
+.contacts-address {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  font-style: normal;
+  color: var(--secondary-text-color);
+}
+
+/* FLEX BOOKING */
+
+.booking-flex {
+  display: flex;
+}
+
+.booking-contacts {
+  width: calc(100% / 2);
 }
