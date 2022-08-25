@@ -44,7 +44,12 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <!-- Top Line (navigation) -->
+   <div class="bg-group">
+     <!--
+       |============================
+       | Top line - navigation
+       |============================
+     -->
     <header class="header">
       <div class="container header-flex">
         <a class="logo" href=""
@@ -68,8 +73,12 @@
         </div>
       </div>
     </header>
-    <main>
-      <!-- Hero -->
+    
+      <!--
+        |============================
+        | HERO
+        |============================
+      -->
 
       <section class="section hero">
         <div class="container hero-flex">
@@ -114,8 +123,13 @@
           </ul>
         </div>
       </section>
+   </div>
 
-      <!-- ABOUT US -->
+      <!--
+        |============================
+        | ABOUT US
+        |============================
+      -->
       <section class="section about">
         <div class="container about-flex">
           <ul class="list">
@@ -158,7 +172,11 @@
         </div>
       </section>
 
-      <!-- SERVISES and PRICES -->
+      <!--
+        |============================
+        | SERVISES and PRICES
+        |============================
+      -->
 
       <section class="section-price">
         <div class="container">
@@ -167,7 +185,7 @@
           </p>
           <h2 class="section-title">Services and prices</h2>
           <div class="list-group">
-            <ul class="list">
+            <ul class="list price-1">
               <li class="list-item">
                 <span>Men’s haircut</span> <span>from 200 uah.</span>
               </li>
@@ -181,7 +199,7 @@
                 <span>Straight razor shave</span> <span>from 300 uah.</span>
               </li>
             </ul>
-            <ul class="list">
+            <ul class="list price-2">
               <li class="list-item">
                 <span>Trainee’s haircut</span> <span>from 50 uah.</span>
               </li>
@@ -202,7 +220,11 @@
         </div>
       </section>
 
-      <!-- BENEFITS -->
+      <!--
+        |============================
+        | BENEFITS
+        |============================
+      -->
 
       <section class="section-benefits">
         <div class="container benefits-flex">
@@ -487,8 +509,11 @@
             <address class="contacts-address">
               <ul class="list">
                 <li class="list-item adress-bottom">
+                  <svg class="contact-icons" width="24" height="24">
+                    <use href="./images/svg-sprite.svg#icon-map-pin"></use>
+                  </svg>
                   <a
-                    class="link"
+                    class="address"
                     href="https://goo.gl/maps/wuicScCzC82bpD2R9"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -496,10 +521,16 @@
                     Kiev, 08132</a
                   >
                 </li>
-                <li class="list-item adress-bottom">
+                <li class="list-item adress-bottom item-center">
+                  <svg class="contact-icons" width="24" height="24">
+                    <use href="./images/svg-sprite.svg#icon-phone"></use>
+                  </svg>
                   <a class="link" href="tel:+380441111111">+38 044 111 11 11</a>
                 </li>
-                <li>
+                <li class="list-item item-center">
+                  <svg class="contact-icons" width="24" height="24">
+                    <use href="./images/svg-sprite.svg#icon-mail"></use>
+                  </svg>
                   <a class="link" href="mailto:barbershop@email.com"
                     >barbershop@email.com</a
                   >
