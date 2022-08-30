@@ -105,7 +105,7 @@
           </ul>
 
           <div class="group">
-            <p class="uppertitle">A hair salon for men in Kyiv</p>
+            <p class="uppertitle dark-theme">A hair salon for men in Kyiv</p>
             <h1 class="main-title">BarberShop</h1>
             <p class="subtitle">
               We are experts in trendy men’s haircuts. <br />
@@ -151,7 +151,7 @@
             </li>
           </ul>
           <div class="group">
-            <p class="uppertitle uppertitle-dark" id="about">About</p>
+            <p class="uppertitle white-theme" id="about">About</p>
             <h2 class="section-title">Best Barbershop in your city</h2>
             <p class="subtitle">
               If you want to add more confidence to your image, you should
@@ -180,39 +180,39 @@
 
       <section class="section-price">
         <div class="container">
-          <p class="uppertitle" id="prices">
+          <p class="uppertitle dark-theme" id="prices">
             spend your time with the best masters
           </p>
           <h2 class="section-title">Services and prices</h2>
           <div class="list-group">
             <ul class="list price-1">
-              <li class="list-item">
-                <span>Men’s haircut</span> <span>from 200 uah.</span>
+              <li class="price-item">
+                <span class="kind-service">Men’s haircut</span> <span>from 200 uah.</span>
               </li>
-              <li class="list-item">
-                <span>Mustache trim</span> <span>from 200 uah.</span>
+              <li class="price-item">
+                <span class="kind-service">Mustache trim</span> <span>from 200 uah.</span>
               </li>
-              <li class="list-item">
-                <span>Beard trim</span> <span>from 300 uah.</span>
+              <li class="price-item">
+                <span class="kind-service">Beard trim</span> <span>from 300 uah.</span>
               </li>
-              <li class="list-item">
-                <span>Straight razor shave</span> <span>from 300 uah.</span>
+              <li class="price-item">
+                <span class="kind-service">Straight razor shave</span> <span>from 300 uah.</span>
               </li>
             </ul>
             <ul class="list price-2">
-              <li class="list-item">
-                <span>Trainee’s haircut</span> <span>from 50 uah.</span>
+              <li  class="price-item">
+                <span class="kind-service">Trainee’s haircut</span> <span>from 50 uah.</span>
               </li>
-              <li class="list-item">
-                <span>Haircut under the nozzle</span>
+              <li  class="price-item">
+                <span class="kind-service">Haircut under the nozzle</span>
                 <span>from 200 uah.</span>
               </li>
-              <li class="list-item">
-                <span>Children’s haircut (0-12 y.o.)</span>
+              <li  class="price-item">
+                <span class="kind-service">Children’s haircut (0-12 y.o.)</span>
                 <span>from 300 uah.</span>
               </li>
-              <li class="list-item">
-                <span>Camouflage of gray hair</span> <span>from 200 uah.</span>
+              <li  class="price-item">
+                <span class="kind-service">Camouflage of gray hair</span> <span>from 200 uah.</span>
               </li>
             </ul>
           </div>
@@ -232,30 +232,35 @@
             <li class="flex-item">
               <ul class="flex-list">
                 <li class="list-item">
-                  <p class="quantity">600<sup>&#43;</sup></p>
+                  <div class="quentity-group">
+                    <p class="quantity">600<sup>&#43;</sup></p>
                   <p class="desc">Satisfied customers per day</p>
+                  </div>
                 </li>
                 <li class="list-item item-end">
-                  <p class="quantity">50<sup>&#43;</sup></p>
-                  <p class="desc">Awards for excellent service</p>
+                  <div class="quentity-group"><p class="quantity">50<sup>&#43;</sup></p>
+                  <p class="desc">Awards for excellent service</p></div>
+                  
                 </li>
               </ul>
             </li>
             <li class="flex-item">
               <ul class="flex-list">
                 <li class="list-item">
-                  <p class="quantity">20<sup>&#43;</sup></p>
-                  <p class="desc">Kyiv’s best barbers</p>
+                  <div class="quentity-group"><p class="quantity">20<sup>&#43;</sup></p>
+                  <p class="desc">Kyiv’s best barbers</p></div>
+                  
                 </li>
                 <li class="list-item item-end">
-                  <p class="quantity">100<sup>&#43;</sup></p>
-                  <p class="desc">Gifts for regular customers</p>
+                  <div class="quentity-group"><p class="quantity">100<sup>&#43;</sup></p>
+                  <p class="desc">Gifts for regular customers</p></div>
+                  
                 </li>
               </ul>
             </li>
           </ul>
           <div class="group">
-            <p class="uppertitle uppertitle-dark">old traditional school</p>
+            <p class="uppertitle white-theme">old traditional school</p>
             <h2 class="section-title">Why people come to us?</h2>
             <p class="subtitle">
               Only good things are said about us. But it's better to see and
@@ -269,12 +274,12 @@
 
       <section class="section-team">
         <div class="container">
-          <p class="uppertitle uppertitle-dark" id="team">
+          <p class="uppertitle white-theme" id="team">
             for true enjoyers of the atmosphere
           </p>
           <h2 class="section-title">Our barbers</h2>
-          <ul class="list">
-            <li class="list-item">
+          <ul class="team-list card-set">
+            <li class="team-item card-set-item">
               <img
                 class="img"
                 src="./images/team/team-img1.jpg"
@@ -292,8 +297,11 @@
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      ><img src="./images/social/insta.png" alt="Instagram"
-                    /></a>
+                      >
+                      <svg width="20" height="20">
+                        <use href="./images/social/icons-sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="social-item">
                     <a
@@ -301,8 +309,11 @@
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      ><img src="./images/social/twitter.svg" alt="Twitter"
-                    /></a>
+                      >
+                      <svg width="20" height="20">
+                        <use href="./images/social/icons-sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="social-item">
                     <a
@@ -310,8 +321,11 @@
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      ><img src="./images/social/facebook.png" alt="Facebook"
-                    /></a>
+                      >
+                      <svg width="20" height="20">
+                        <use href="./images/social/icons-sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="social-item">
                     <a
@@ -319,13 +333,16 @@
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      ><img src="./images/social/linkedin.svg" alt="LinkedIn"
-                    /></a>
+                      >
+                      <svg width="20" height="20">
+                        <use href="./images/social/icons-sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
             </li>
-            <li class="list-item">
+            <li class="team-item card-set-item">
               <img
                 class="img"
                 src="./images/team/team-img2.jpg"
@@ -343,8 +360,11 @@
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      ><img src="./images/social/insta.png" alt="Instagram"
-                    /></a>
+                      >
+                      <svg width="20" height="20">
+                        <use href="./images/social/icons-sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="social-item">
                     <a
@@ -352,8 +372,11 @@
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      ><img src="./images/social/twitter.svg" alt="Twitter"
-                    /></a>
+                      >
+                      <svg width="20" height="20">
+                        <use href="./images/social/icons-sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="social-item">
                     <a
@@ -361,8 +384,11 @@
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      ><img src="./images/social/facebook.png" alt="Facebook"
-                    /></a>
+                      >
+                      <svg width="20" height="20">
+                        <use href="./images/social/icons-sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="social-item">
                     <a
@@ -370,13 +396,16 @@
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      ><img src="./images/social/linkedin.svg" alt="LinkedIn"
-                    /></a>
+                      >
+                      <svg width="20" height="20">
+                        <use href="./images/social/icons-sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
             </li>
-            <li class="list-item">
+            <li class="team-item card-set-item">
               <img
                 class="img"
                 src="./images/team/team-img3.jpg"
@@ -394,8 +423,11 @@
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      ><img src="./images/social/insta.png" alt="Instagram"
-                    /></a>
+                      >
+                      <svg width="20" height="20">
+                        <use href="./images/social/icons-sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="social-item">
                     <a
@@ -403,8 +435,11 @@
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      ><img src="./images/social/twitter.svg" alt="Twitter"
-                    /></a>
+                      >
+                      <svg width="20" height="20">
+                        <use href="./images/social/icons-sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="social-item">
                     <a
@@ -412,8 +447,11 @@
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      ><img src="./images/social/facebook.png" alt="Facebook"
-                    /></a>
+                      >
+                      <svg width="20" height="20">
+                        <use href="./images/social/icons-sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
                   </li>
                   <li class="social-item">
                     <a
@@ -421,8 +459,11 @@
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      ><img src="./images/social/linkedin.svg" alt="LinkedIn"
-                    /></a>
+                      >
+                      <svg width="20" height="20">
+                        <use href="./images/social/icons-sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -435,12 +476,12 @@
 
       <section class="section-galery">
         <div class="container">
-          <p class="uppertitle uppertitle-dark">
+          <p class="uppertitle white-theme">
             in Latin, "barba" means "beard"
           </p>
           <h2 hidden class="section-title">Our gallery</h2>
-          <ul class="list">
-            <li class="list-item">
+          <ul class="galery-list card-set">
+            <li class="galery-item card-set-item">
               <img
                 class="img"
                 src="./images/gallery/gallery-img-1.jpg"
@@ -449,7 +490,7 @@
                 height="360"
               />
             </li>
-            <li class="list-item">
+            <li class="galery-item card-set-item">
               <img
                 class="img"
                 src="./images/gallery/gallery-img-2.jpg"
@@ -458,7 +499,7 @@
                 height="360"
               />
             </li>
-            <li class="list-item">
+            <li class="galery-item card-set-item">
               <img
                 class="img"
                 src="./images/gallery/gallery-img-3.jpg"
@@ -467,7 +508,7 @@
                 height="360"
               />
             </li>
-            <li class="list-item">
+            <li class="galery-item card-set-item">
               <img
                 class="img"
                 src="./images/gallery/gallery-img-4.jpg"
@@ -539,7 +580,7 @@
             </address>
 
             <div class="group">
-              <p class="uppertitle">working hours</p>
+              <p class="uppertitle dark-theme">working hours</p>
               <p class="contacts-schedule">
                 Every day from <time datetime="09:00">9:00</time> to
                 <time datetime="22:00">22:00</time>
