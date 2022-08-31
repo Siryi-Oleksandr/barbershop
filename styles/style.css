@@ -84,6 +84,7 @@ h3 {
 }
 
 .nav .link {
+  display: block;
   color: var(--white-text-color);
   font-weight: 600;
   font-size: 12px;
@@ -91,13 +92,18 @@ h3 {
   letter-spacing: 0.1em;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  transition: color 250ms ease, transform 250ms ease;
 }
 .nav a:hover,
 .nav a:focus {
   color: var(--link-text-color);
+  transform: scale(1.2);
 }
 
 .contacts .tel {
+  display: inline-block;
+
   color: var(--white-text-color);
 
   font-weight: 600;
@@ -109,10 +115,13 @@ h3 {
   margin-right: 45px;
   padding-top: 30px;
   padding-bottom: 30px;
+
+  transition: color 250ms ease, transform 250ms ease;
 }
 .contacts .tel:hover,
 .contacts .tel:focus {
   color: var(--link-text-color);
+  transform: scale(1.2);
 }
 
 .btn-booking {
@@ -130,11 +139,21 @@ h3 {
   padding: auto;
   border: 1px solid var(--link-text-color);
   border-radius: 20px;
+  transition: all 250ms ease;
 }
 .btn-booking:hover,
 .btn-booking:focus {
-  background-color: #ff6c00;
+  background-color: rgb(255, 108, 0);
+  box-shadow: -2px 1px 24px 6px rgba(255, 108, 0, 0.75);
+
   cursor: pointer;
+}
+
+.btn-booking:active {
+  background-color: rgb(255, 108, 0);
+  box-shadow: -2px 1px 24px 6px rgba(255, 108, 0, 0.5) inset;
+
+  /* cursor: pointer; */
 }
 
 /* FLEX HEADER */
@@ -243,12 +262,31 @@ h3 {
 }
 
 .social-list .link {
+  display: inline-block;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
 
   color: var(--title-text-color);
+
+  transition: all 250ms ease-in-out;
+}
+
+.social-list .link:hover {
+  transform: scale(1.2);
+  color: var(--link-text-color);
+}
+
+.social-list > .list-item:not(:last-child)::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+
+  display: block;
+  margin-right: 40px;
+
+  background-color: var(--title-text-color);
 }
 
 .hero .btn {
@@ -328,6 +366,35 @@ h3 {
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
+}
+
+.about .list-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.about .list-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 445px;
+  opacity: 0;
+  transform: scalex(0);
+
+  background-color: var(--secondary-text-color-alpha);
+
+  /* transform: translateX(-100%); */
+  pointer-events: none;
+  transition: all 250ms ease-in-out;
+}
+
+.about .list-item:hover::before {
+  opacity: 1;
+  /* transform: translateX(0); */
+  transform: scalex(1);
 }
 
 /* FLEX ABOUT */
@@ -571,11 +638,15 @@ h3 {
 
   color: #303030;
   fill: currentColor;
+
+  transition: all 250ms ease-in-out;
 }
 
 .socials-link:hover,
 .socials-link:focus {
   color: var(--link-text-color);
+  transform: scale(1.2);
+  box-shadow: -2px 1px 24px 6px rgba(157, 164, 189, 0.75);
 }
 
 /* GALERY */
@@ -697,12 +768,8 @@ form {
 
 /* FOOTER */
 
-.footer {
-  padding-top: 56px;
-  padding-bottom: 56px;
-}
-
 .copyright {
+  padding: 56px 0;
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -712,6 +779,7 @@ form {
 }
 
 .footer .link {
+  padding: 56px 0;
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -726,10 +794,12 @@ form {
   justify-content: space-between;
 }
 
-.footer .list {
+.footer .social-list {
   display: flex;
+  align-items: center;
 }
 
-.footer .list-item:not(:last-child) {
-  margin-right: 40px;
+.footer .list-item {
+  display: flex;
+  align-items: center;
 }
