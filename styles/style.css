@@ -481,7 +481,8 @@ h3 {
 
 .kind-service {
   display: flex;
-  flex-shrink: 0;
+  justify-content: space-between;
+  width: 350px;
   align-items: baseline;
 }
 
@@ -635,7 +636,9 @@ h3 {
   height: 44px;
   border-radius: 50%;
   background-color: #fff;
-
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   color: #303030;
   fill: currentColor;
 
@@ -646,7 +649,10 @@ h3 {
 .socials-link:focus {
   color: var(--link-text-color);
   transform: scale(1.2);
-  box-shadow: -2px 1px 24px 6px rgba(157, 164, 189, 0.75);
+  box-shadow: -2px 1px 24px 6px rgba(157, 164, 189, 0.75),
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 /* GALERY */
@@ -662,6 +668,12 @@ h3 {
 
 .galery-list {
   --items: 4;
+}
+
+.galery-item {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 /**
@@ -802,4 +814,51 @@ form {
 .footer .list-item {
   display: flex;
   align-items: center;
+}
+
+/**
+  |============================
+  | Flip card 3D
+  |============================
+*/
+.team-item:hover .team-card {
+  transform: rotateY(-180deg);
+  box-shadow: 7px 13px 25px -6px rgb(0 0 0 / 72%);
+}
+.team-item {
+  perspective: 600px;
+
+  cursor: pointer;
+  height: 346px;
+}
+.team-card {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+  transition: transform 1s ease, box-shadow 1s ease;
+  transform-style: preserve-3d;
+}
+.card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  backface-visibility: hidden;
+}
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  backface-visibility: hidden;
+  background-color: var(--secondary-bg-color);
+  transform: rotateY(180deg);
 }
