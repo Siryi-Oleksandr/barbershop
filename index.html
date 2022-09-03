@@ -69,7 +69,7 @@
         </nav>
         <div class="contacts">
           <a class="tel" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn btn-booking" type="button">Online-booking</button>
+          <button class="btn btn-booking" type="button" data-modal-open>Online-booking</button>
         </div>
       </div>
     </header>
@@ -633,6 +633,24 @@
           </ul>
         </div>
       </footer>
+
+      <!--
+        |============================
+        | MODAL WINDOW
+        |============================
+      -->
+
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sed nihil facilis vel, ipsa numquam. Dolore, assumenda. Maxime quisquam dignissimos eos, facere harum earum reprehenderit fugit architecto dolor! Obcaecati deleniti ullam ut maxime officia? Cumque, hic vero, iure delectus sed maxime, eligendi distinctio minus similique soluta ad odio eius neque?</p>
+         <button type="button" data-modal-close>Close</button>
+        </div>
+       
+        
+      </div>
+
     </main>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
