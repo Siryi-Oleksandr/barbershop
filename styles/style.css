@@ -102,9 +102,11 @@ h3 {
 }
 
 .contacts .tel {
-  display: inline-block;
+  display: flex;
+  align-items: center;
 
   color: var(--white-text-color);
+  fill: var(--white-text-color);
 
   font-weight: 600;
   font-size: 12px;
@@ -116,13 +118,114 @@ h3 {
   padding-top: 30px;
   padding-bottom: 30px;
 
-  transition: color 250ms ease, transform 250ms ease;
+  transition: color 250ms ease;
 }
 .contacts .tel:hover,
 .contacts .tel:focus {
   color: var(--link-text-color);
-  transform: scale(1.2);
 }
+
+/**
+  |============================
+  | Icon of the phone var.1
+  |============================
+*/
+.heart {
+  position: absolute;
+  top: -25px;
+  left: 0;
+
+  margin-right: 10px;
+  fill: currentColor;
+
+  opacity: 0;
+  transition: transform 250ms ease, opacity 1000ms ease-in-out;
+}
+.phone {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  margin-right: 10px;
+  fill: currentColor;
+
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: transform 250ms ease, opacity 1000ms ease-in-out;
+}
+
+.tel:hover .heart {
+  transform: translateY(50px);
+  opacity: 1;
+}
+
+.tel:hover .phone {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.contacts {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 40px;
+
+  overflow: hidden;
+}
+
+/**
+  |============================
+  | Icon of the phone var.2
+  |============================
+*/
+/*
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  margin-right: 10px;
+  fill: currentColor;
+
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 250ms linear;
+}
+.phone {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  margin-right: 10px;
+  fill: currentColor;
+
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: opacity 250ms linear;
+}
+
+.tel:hover .heart {
+  opacity: 1;
+}
+
+.tel:hover .phone {
+  opacity: 0;
+}
+
+.contacts {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 40px;
+}
+*/
+/**
+  |============================
+*/
 
 .btn-booking {
   color: var(--white-text-color);
@@ -865,51 +968,72 @@ form {
 
 /**
   |============================
-  | MODAL
+  | Flip card 3D section Gallery
   |============================
 */
 
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
+.scene {
+  perspective: 600px;
+}
+.scene:hover .gallery-card {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.gallery-card {
+  position: relative;
+
   width: 100%;
-  height: 100%;
-  background-color: rgba(151, 107, 167, 0.5);
+  height: 360px;
 
-  opacity: 1;
+  background-color: #3b4464;
 
-  transition: opacity 500ms ease;
+  transition: all 1s linear;
+  transform-style: preserve-3d;
 }
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
+.picture-front {
+  position: absolute;
+  backface-visibility: hidden;
 }
 
-.modal {
+.picture-back {
   position: absolute;
   top: 50%;
   left: 50%;
-
-  width: 400px;
-  height: 600px;
-  padding: 30px;
-
-  border-radius: 10px;
-  background-color: skyblue;
-
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-  transition: transform 500ms ease, opacity 500ms ease;
+  transform: translate(-50%, -50%) rotatey(180deg);
+  backface-visibility: hidden;
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.75);
-  opacity: 0;
+.gallery-card:hover .suit {
+  transition: all 500ms linear 500ms;
+  transform: rotate(360deg) scale(1.8);
 }
 
-.modal button {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
+.suit.red {
+  fill: red;
+}
+
+/**
+  |============================
+  | Animation
+  |============================
+*/
+
+@keyframes bitHeart {
+  0% {
+    transform: scale(1);
+    fill: orange;
+  }
+  50% {
+    transform: scale(1.5);
+    fill: orangered;
+  }
+  100% {
+    transform: scale(2);
+    fill: red;
+  }
+}
+
+.gallery-card:hover .suit-bit {
+  animation: bitHeart 550ms linear 1.2s infinite;
 }

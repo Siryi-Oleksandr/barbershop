@@ -68,8 +68,16 @@
           </ul>
         </nav>
         <div class="contacts">
-          <a class="tel" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="btn btn-booking" type="button" data-modal-open>Online-booking</button>
+          <a class="tel" href="tel:+380441111111">
+            <svg class="heart" width="20" height="20">
+              <use href="./images/sprite-3d.svg#heart"></use>
+            </svg>
+            <svg class="phone" width="20" height="20">
+              <use href="./images/sprite-3d.svg#phone"></use>
+            </svg>
+            <span>+38 044 111 11 11</span>
+            </a>
+          <button class="btn btn-booking" type="button">Online-booking</button>
         </div>
       </div>
     </header>
@@ -498,42 +506,102 @@
           </p>
           <h2 hidden class="section-title">Our gallery</h2>
           <ul class="galery-list card-set">
-            <li class="galery-item card-set-item">
-              <img
+
+            <li class="galery-item card-set-item scene">
+              <div class="gallery-card">
+                <div class="picture-front">
+                <img
                 class="img"
                 src="./images/gallery/gallery-img-1.jpg"
                 alt="barber cuts a man"
                 width="270"
                 height="360"
               />
+              </div>
+              <div class="picture-back">
+                <svg class="suit" width="100" height="100">
+                  <use href="./images/sprite-3d.svg#spades"></use>
+                </svg>
+              </div>
+              </div>
             </li>
-            <li class="galery-item card-set-item">
-              <img
+
+            <li class="galery-item card-set-item scene">
+              <div class="gallery-card">
+                <div class="picture-front">
+<img
                 class="img"
                 src="./images/gallery/gallery-img-2.jpg"
                 alt="barber shaves a man"
                 width="270"
                 height="360"
               />
+              </div>
+              <div class="picture-back">
+                <svg class="suit" width="100" height="100">
+                  <use href="./images/sprite-3d.svg#clubs"></use>
+                </svg>
+              </div>
+              </div>
+              
             </li>
-            <li class="galery-item card-set-item">
-              <img
+
+            <li class="galery-item card-set-item scene">
+              <div class="gallery-card">
+                <div class="picture-front">
+                <img
                 class="img"
                 src="./images/gallery/gallery-img-3.jpg"
                 alt="barber wipes man's face with a towel"
                 width="270"
                 height="360"
               />
+              </div>
+              <div class="picture-back">
+                <svg class="suit red" width="100" height="100">
+                  <use href="./images/sprite-3d.svg#diamonds"></use>
+                </svg>
+              </div>
+              </div>
             </li>
-            <li class="galery-item card-set-item">
-              <img
+
+            <li class="galery-item card-set-item scene">
+              <div class="gallery-card">
+                <div class="picture-front">
+                <img
                 class="img"
                 src="./images/gallery/gallery-img-4.jpg"
                 alt="barber cuts a man"
                 width="270"
                 height="360"
               />
+              </div>
+              <div class="picture-back">
+                <svg class="suit red" width="100" height="100">
+                  <use href="./images/sprite-3d.svg#heart"></use>
+                </svg>
+              </div>
+              </div>
             </li>
+            <li class="galery-item card-set-item scene">
+              <div class="gallery-card">
+                <div class="picture-front">
+                <img
+                class="img"
+                src="./images/gallery/gallery-img-4.jpg"
+                alt="barber cuts a man"
+                width="270"
+                height="360"
+              />
+              </div>
+              <div class="picture-back">
+                <svg class="suit red suit-bit" width="100" height="100">
+                  <use href="./images/sprite-3d.svg#heart"></use>
+                </svg>
+              </div>
+              </div>
+            </li>
+
           </ul>
         </div>
       </section>
@@ -633,24 +701,6 @@
           </ul>
         </div>
       </footer>
-
-      <!--
-        |============================
-        | MODAL WINDOW
-        |============================
-      -->
-
-      <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sed nihil facilis vel, ipsa numquam. Dolore, assumenda. Maxime quisquam dignissimos eos, facere harum earum reprehenderit fugit architecto dolor! Obcaecati deleniti ullam ut maxime officia? Cumque, hic vero, iure delectus sed maxime, eligendi distinctio minus similique soluta ad odio eius neque?</p>
-         <button type="button" data-modal-close>Close</button>
-        </div>
-       
-        
-      </div>
-
     </main>
-
-    <script src="./js/modal.js"></script>
   </body>
 </html>
