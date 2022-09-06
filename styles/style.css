@@ -58,6 +58,8 @@ h3 {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  outline: 1px solid red;
 }
 
 .section {
@@ -67,18 +69,20 @@ h3 {
 
 /* ХЕДЕР */
 
-.bg-group {
-  max-width: 1224px;
-  min-height: 680px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url(../images/background/Slider-main.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 150px 0;
+.section.hero {
+  padding-top: 0;
+  padding-bottom: 40px;
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  background-color: rgba(48, 48, 48, 0.2);
+
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -228,18 +232,20 @@ h3 {
 */
 
 .btn-booking {
-  color: var(--white-text-color);
-  background-color: transparent;
+  display: block;
+  padding: auto;
 
+  width: 160px;
+  min-height: 40px;
+
+  color: var(--white-text-color);
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 
-  min-width: 160px;
-  min-height: 40px;
-  padding: auto;
+  background-color: transparent;
   border: 1px solid var(--link-text-color);
   border-radius: 20px;
   transition: all 250ms ease;
@@ -303,11 +309,6 @@ h3 {
   | HERO
   |============================
 */
-
-.hero {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
 
 .main-title {
   color: var(--white-text-color);
@@ -393,11 +394,23 @@ h3 {
 }
 
 .hero .btn {
+  width: 68px;
+  padding-bottom: 8px;
+
+  border: none;
+  border-bottom: 1px solid var(--white-text-color);
+  background-color: transparent;
+
   color: var(--white-text-color);
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
+}
+
+.hero .btn.disabled {
+  color: rgba(157, 164, 189, 0.6);
+  border-bottom-color: rgba(157, 164, 189, 0.6);
 }
 
 .hero .btn:hover,
@@ -414,30 +427,88 @@ h3 {
   color: var(--secondary-text-color);
 }
 
+.slider-pagination {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+
+.item-pagination {
+  margin-left: auto;
+  width: 8px;
+  height: 2px;
+  background-color: var(--secondary-text-color-alpha);
+}
+
+.item-pagination:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.item-pagination.active {
+  width: 18px;
+  height: 2px;
+  background-color: var(--white-text-color);
+}
+
 /* FLEX HERO */
 
-.hero-flex {
-  display: flex;
-  height: 370px;
+.hero-group {
+  padding-top: 252px;
+  padding-bottom: 206px;
+  padding-left: 100px;
+
+  flex-grow: 1;
+
+  background-color: #191c2626;
 }
-.hero-flex .list {
+.hero-group .list {
   align-self: flex-end;
   margin-left: auto;
   display: flex;
 }
-.hero-flex .list-item:not(:last-child) {
+.hero-group .list-item:not(:last-child) {
   margin-right: 22px;
 }
 
-.hero-flex .social-list {
+.hero-group .social-list {
   align-self: flex-end;
   display: flex;
   flex-wrap: wrap;
   width: 80px;
 }
 
+.hero-bg {
+  position: relative;
+
+  margin-right: -15px;
+
+  flex-grow: 1;
+  background-image: url(../images/background/Slider-main.jpg);
+}
+
+.flex-side {
+  display: flex;
+}
+
 .social-list .list-item:not(:last-child) {
   margin-right: 20px;
+}
+
+.slider-list {
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+
+  display: flex;
+  gap: 22px;
+}
+
+.slider-item:first-child .btn {
+  text-align: left;
+}
+
+.slider-item:last-child .btn {
+  text-align: right;
 }
 
 /**
@@ -849,10 +920,6 @@ h3 {
   color: var(--secondary-text-color);
 }
 
-.group-booking .btn-booking {
-  margin-top: 44px;
-}
-
 .address {
   display: inline-block;
   margin-left: 37px;
@@ -867,8 +934,114 @@ h3 {
   align-items: center;
 }
 
+.section-title.booking {
+  margin-bottom: 0;
+}
+
 form {
+  padding-left: 55px;
+  padding-right: 40px;
+  width: calc(100% / 2);
   background-color: #191c26;
+}
+
+.text-field {
+  padding: 3px 0;
+
+  width: 100%;
+
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--white-text-color);
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+
+  outline: none;
+  transition: border-color 250ms linear;
+}
+
+.form-field-position {
+  position: relative;
+}
+
+.text-label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+
+  transition: transform 500ms linear, color 250ms linear;
+}
+.text-field:focus + .text-label {
+  color: var(--white-text-color);
+  transform: translateY(-45px) rotate(360deg);
+}
+
+.text-field:focus,
+.comment-field:focus {
+  border-bottom-color: var(--white-text-color);
+}
+
+.comment-field:focus + .comment {
+  color: var(--white-text-color);
+  transform: translateY(-50px) rotate(360deg);
+}
+
+.comment {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+
+  transition: transform 500ms linear, color 250ms linear;
+}
+
+.form-field {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.comment-field {
+  width: 100%;
+}
+
+.comment-field:hover,
+.text-field:hover {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+  padding-top: 10px;
+
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--white-text-color);
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+
+  outline: none;
+  transition: border-color 250ms linear;
 }
 
 /* FLEX BOOKING */
@@ -879,6 +1052,18 @@ form {
 
 .booking-contacts {
   width: calc(100% / 2);
+}
+
+/**
+  |============================
+  | FORM
+  |============================
+*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
 }
 
 /* FOOTER */
@@ -1036,4 +1221,55 @@ form {
 
 .gallery-card:hover .suit-bit {
   animation: bitHeart 550ms linear 1.2s infinite;
+}
+
+/**
+  |============================
+  | MODAL
+  |============================
+*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(151, 107, 167, 0.5);
+
+  opacity: 1;
+
+  transition: opacity 500ms ease;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 400px;
+  height: 600px;
+  padding: 30px;
+
+  border-radius: 10px;
+  background-color: skyblue;
+
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: transform 500ms ease, opacity 500ms ease;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.75);
+  opacity: 0;
+}
+
+.modal button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }

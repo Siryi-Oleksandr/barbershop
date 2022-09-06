@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-   <div class="bg-group">
+   
      <!--
        |============================
        | Top line - navigation
@@ -77,7 +77,7 @@
             </svg>
             <span>+38 044 111 11 11</span>
             </a>
-          <button class="btn btn-booking" type="button">Online-booking</button>
+           <button class="btn btn-booking" type="button" data-modal-open>Online-booking</button>
         </div>
       </div>
     </header>
@@ -89,7 +89,7 @@
       -->
 
       <section class="section hero">
-        <div class="container hero-flex">
+        <div class="container flex-side">
           <ul class="social-list">
             <li class="list-item">
               <a
@@ -111,8 +111,8 @@
               >
             </li>
           </ul>
-
-          <div class="group">
+<div class="hero-bg">
+  <div class="hero-group">
             <p class="uppertitle dark-theme">A hair salon for men in Kyiv</p>
             <h1 class="main-title">BarberShop</h1>
             <p class="subtitle">
@@ -121,17 +121,24 @@
             </p>
           </div>
 
-          <ul class="list">
-            <li class="list-item">
-              <button class="btn" type="button">Back</button>
+          <ul class="slider-list">
+            <li class="slider-item">
+              <button class="btn disabled" type="button">Back</button>
             </li>
-            <li class="list-item">
+            <li class="slider-item">
               <button class="btn" type="button">Forward</button>
             </li>
           </ul>
+          <ul class="slider-pagination">
+            <li class="item-pagination active"></li>
+            <li class="item-pagination"></li>
+            <li class="item-pagination"></li>
+          </ul>
+</div>
+          
         </div>
       </section>
-   </div>
+   
 
       <!--
         |============================
@@ -565,24 +572,7 @@
               </div>
             </li>
 
-            <li class="galery-item card-set-item scene">
-              <div class="gallery-card">
-                <div class="picture-front">
-                <img
-                class="img"
-                src="./images/gallery/gallery-img-4.jpg"
-                alt="barber cuts a man"
-                width="270"
-                height="360"
-              />
-              </div>
-              <div class="picture-back">
-                <svg class="suit red" width="100" height="100">
-                  <use href="./images/sprite-3d.svg#heart"></use>
-                </svg>
-              </div>
-              </div>
-            </li>
+            
             <li class="galery-item card-set-item scene">
               <div class="gallery-card">
                 <div class="picture-front">
@@ -610,23 +600,27 @@
 
       <div class="group-booking section">
         <div class="container booking-flex">
-          <form
-            class="booking booking-contacts"
-            action="/contacts"
-            method="post"
-          >
-            <h2 class="section-title">Online-booking</h2>
+          <form>   
+              <h2 class="section-title booking" id="contacts">Online-booking</h2>    
 
-            <label class="label"
-              >Name<input type="text" name="first_name" novalidate
-            /></label>
-            <label class="label"
-              >Phone<input type="tel" name="phone_number" novalidate
-            /></label>
-            <label class="label"
-              >Message
-              <textarea name="message" rows="5"></textarea>
-            </label>
+              <div class="form-field">
+                <div class="form-field-position">
+                  <input class="text-field" type="text" id="name" name="name" placeholder=" ">
+                <label class="text-label" for="name">Name*</label>
+                </div>
+
+                <div class="form-field-position">
+                  <input class="text-field" type="tel" name="phone" id="tel" placeholder=" ">
+                <label class="text-label" for="tel">phone*</label>
+                </div>
+              </div>
+
+              <div class="form-field-position">
+                
+                <textarea class="comment-field" name="comment" id="comment" rows="2" placeholder=" "></textarea>
+              <label class="comment" for="comment">Message</label>
+              </div>
+
             <button class="btn-booking btn" type="submit">Send</button>
           </form>
 
@@ -701,6 +695,24 @@
           </ul>
         </div>
       </footer>
+
+<!--
+        |============================
+        | MODAL WINDOW
+        |============================
+      -->
+
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis sed nihil facilis vel, ipsa numquam. Dolore, assumenda. Maxime quisquam dignissimos eos, facere harum earum reprehenderit fugit architecto dolor! Obcaecati deleniti ullam ut maxime officia? Cumque, hic vero, iure delectus sed maxime, eligendi distinctio minus similique soluta ad odio eius neque?</p>
+         <button type="button" data-modal-close>Close</button>
+        </div>
+
+
+      </div>
+
     </main>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
