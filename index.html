@@ -41,6 +41,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- My CSS -->
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
@@ -90,15 +93,15 @@
 
       <section class="section hero">
         <div class="container flex-side">
-          <ul class="social-list">
+          <div class="hero-left-side">
+            <ul class="social-list main">
             <li class="list-item">
               <a
                 class="link"
                 href="https://Instagram.com"
                 target="_blank"
                 rel="noreferrer noopener"
-                >Instagram</a
-              >
+                >Instagram</a>
             </li>
 
             <li class="list-item">
@@ -111,6 +114,7 @@
               >
             </li>
           </ul>
+          </div>
 <div class="hero-bg">
   <div class="hero-group">
             <p class="uppertitle dark-theme">A hair salon for men in Kyiv</p>
@@ -201,7 +205,7 @@
             spend your time with the best masters
           </p>
           <h2 class="section-title">Services and prices</h2>
-          <div class="list-group">
+          <div class="list-group price-scene">
             <ul class="list price-1">
               <li class="price-item">
                 <span class="kind-service">Men’s haircut</span> <span>from 200 uah.</span>
@@ -295,7 +299,8 @@
             for true enjoyers of the atmosphere
           </p>
           <h2 class="section-title">Our barbers</h2>
-          <ul class="team-list card-set">
+          <ul class="team-list card-set" data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
             <li class="team-item card-set-item">
               <div class="team-card">
                 <div class="card-front">
@@ -514,7 +519,7 @@
           <h2 hidden class="section-title">Our gallery</h2>
           <ul class="galery-list card-set">
 
-            <li class="galery-item card-set-item scene">
+            <li class="galery-item card-set-item scene" data-aos="fade-right" data-aos-duration="3000" data-aos-delay="0">
               <div class="gallery-card">
                 <div class="picture-front">
                 <img
@@ -533,7 +538,7 @@
               </div>
             </li>
 
-            <li class="galery-item card-set-item scene">
+            <li class="galery-item card-set-item scene" data-aos="fade-right" data-aos-duration="3000" data-aos-delay="500">
               <div class="gallery-card">
                 <div class="picture-front">
 <img
@@ -553,7 +558,7 @@
               
             </li>
 
-            <li class="galery-item card-set-item scene">
+            <li class="galery-item card-set-item scene" data-aos="fade-right" data-aos-duration="3000" data-aos-delay="1000">
               <div class="gallery-card">
                 <div class="picture-front">
                 <img
@@ -573,7 +578,7 @@
             </li>
 
             
-            <li class="galery-item card-set-item scene">
+            <li class="galery-item card-set-item scene" data-aos="fade-right" data-aos-duration="3000" data-aos-delay="1500">
               <div class="gallery-card">
                 <div class="picture-front">
                 <img
@@ -605,21 +610,52 @@
 
               <div class="form-field">
                 <div class="form-field-position">
-                  <input class="text-field" type="text" id="name" name="name" placeholder=" ">
+                  <input class="text-field" type="text" id="name" name="name" required>
                 <label class="text-label" for="name">Name*</label>
                 </div>
 
                 <div class="form-field-position">
-                  <input class="text-field" type="tel" name="phone" id="tel" placeholder=" ">
+                  <input class="text-field" type="tel" name="phone" id="tel" required>
                 <label class="text-label" for="tel">phone*</label>
                 </div>
               </div>
 
               <div class="form-field-position">
-                
                 <textarea class="comment-field" name="comment" id="comment" rows="2" placeholder=" "></textarea>
               <label class="comment" for="comment">Message</label>
               </div>
+
+              
+                <p class="message-title">Your favorite messanger:</p>
+                <div class="form-checkbox">
+                
+                  <div class="form-field-message">
+                    <input class="checkbox" type="checkbox" name="favorite_messanger" id="viber" value="viber">
+                    <span class="icon-checkbox"></span>
+                    <label class="label-check" for="viber">Viber</label>
+                  </div>
+
+                  <div class="form-field-message">
+                    <input class="checkbox" type="checkbox" name="favorite_messanger" id="telegram" value="telegram" checked>
+                    <span class="icon-checkbox"></span>
+                    <label class="label-check" for="telegram">Telegram</label>
+                  </div>
+
+                  <div class="form-field-message">
+                    <input class="checkbox" type="checkbox" name="favorite_messanger" id="watsapp" value="watsapp">
+                    <span class="icon-checkbox"></span>
+                    <label class="label-check" for="watsapp">WatsApp</label>
+                  </div>
+
+                  <div class="form-field-message">
+                    <input class="checkbox" type="checkbox" name="favorite_messanger" id="signal" value="signal" disabled>
+                    <span class="icon-checkbox"></span>
+                    <label class="label-check" for="signal">Signal</label>
+                  </div>
+                
+                
+              </div>
+
 
             <button class="btn-booking btn" type="submit">Send</button>
           </form>
@@ -714,5 +750,7 @@
     </main>
 
     <script src="./js/modal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/aos.js"></script>
   </body>
 </html>

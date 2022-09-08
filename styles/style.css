@@ -365,13 +365,35 @@ h3 {
   margin-top: 20px;
 }
 
+.hero-left-side {
+  width: 100px;
+  display: flex;
+  align-items: flex-end;
+
+  outline: 1px dotted orangered;
+}
+
+.social-list.main {
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+}
+.social-list.main > .list-item:first-child {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+}
+
 .social-list .link {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   display: inline-block;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
-
   color: var(--title-text-color);
 
   transition: all 250ms ease-in-out;
@@ -547,7 +569,7 @@ h3 {
   overflow: hidden;
 }
 
-.about .list-item::before {
+/* .about .list-item::before {
   content: "";
   display: block;
   position: absolute;
@@ -560,16 +582,16 @@ h3 {
 
   background-color: var(--secondary-text-color-alpha);
 
-  /* transform: translateX(-100%); */
+  
   pointer-events: none;
   transition: all 250ms ease-in-out;
 }
 
 .about .list-item:hover::before {
   opacity: 1;
-  /* transform: translateX(0); */
+ 
   transform: scalex(1);
-}
+} */
 
 /* FLEX ABOUT */
 
@@ -679,6 +701,41 @@ h3 {
 .list-group .list {
   width: calc(100% / 2);
   padding: 30px 40px;
+}
+
+/* 3D animations Prices */
+
+.price-scene {
+  perspective: 600px;
+}
+.price-1 {
+  transform: rotateY(20deg);
+  transform-origin: left center;
+  transition: transform 250ms linear, box-shadow 250ms linear 250ms;
+}
+
+.price-2 {
+  transform: rotateY(-20deg);
+  transform-origin: right center;
+  transition: transform 250ms linear, box-shadow 250ms linear 250ms;
+}
+.price-1:hover {
+  transform: rotateY(0deg);
+  transform-origin: left center;
+  box-shadow: rgba(255, 255, 255, 0.07) 0px 1px 2px,
+    rgba(255, 255, 255, 0.07) 0px 2px 4px, rgba(255, 255, 255, 0.07) 0px 4px 8px,
+    rgba(255, 255, 255, 0.07) 0px 8px 16px,
+    rgba(255, 255, 255, 0.07) 0px 16px 32px,
+    rgba(255, 255, 255, 0.07) 0px 32px 64px;
+}
+.price-2:hover {
+  transform: rotateY(0);
+  transform-origin: right center;
+  box-shadow: rgba(255, 255, 255, 0.07) 0px 1px 2px,
+    rgba(255, 255, 255, 0.07) 0px 2px 4px, rgba(255, 255, 255, 0.07) 0px 4px 8px,
+    rgba(255, 255, 255, 0.07) 0px 8px 16px,
+    rgba(255, 255, 255, 0.07) 0px 16px 32px,
+    rgba(255, 255, 255, 0.07) 0px 32px 64px;
 }
 
 /* BENEFITS */
@@ -941,7 +998,7 @@ h3 {
 form {
   padding-left: 55px;
   padding-right: 40px;
-  width: calc(100% / 2);
+  width: calc((100% / 2) - 40px);
   background-color: #191c26;
 }
 
@@ -1044,6 +1101,73 @@ textarea {
   transition: border-color 250ms linear;
 }
 
+/* field check-list */
+.form-field-message {
+  position: relative;
+}
+.checkbox {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.icon-checkbox {
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 4px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.checkbox:checked + .icon-checkbox {
+  background-image: url(../images/social/check.svg);
+  background-color: #2196f3;
+  border-color: transparent;
+  background-origin: border-box;
+}
+.checkbox:disabled + .icon-checkbox {
+  background-color: var(--secondary-text-color);
+}
+.checkbox:checked ~ .label-check {
+  color: #ffffff;
+}
+
+.message-title {
+  font-size: 11px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+  text-transform: uppercase;
+}
+.form-checkbox {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+}
+.label-check {
+  position: relative;
+
+  padding-left: 20px;
+
+  color: rgba(157, 164, 189, 0.4);
+}
+.icon-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 /* FLEX BOOKING */
 
 .booking-flex {
