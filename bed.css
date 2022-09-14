@@ -1,80 +1,6 @@
-:root {
-  /* Palette BackGroun Colors*/
-  --primari-bg-color: #ffffff;
-  --secondary-bg-color: #f7f7f7;
-  --footer-bg-color: #3b4464;
-  /* Palette Text Colors*/
-  --primary-text-color: #555555;
-  --secondary-text-color: #9da4bd;
-  --secondary-text-color-alpha: rgba(157, 164, 189, 0.6);
-  --title-text-color: #303030;
-  --link-text-color: #ff6c00;
-  --white-text-color: #ffffff;
-  --noactive-text-color: rgba(157, 164, 189, 0.4);
-  /* OTHER */
-  --section-padding: 130px;
-  --items: 1;
-  --indent: 30px;
-}
-
-body {
-  color: var(--primary-text-color);
-  background-color: var(--primari-bg-color);
-  font-family: "Open Sans", Raleway, Montserrat, sans-serif;
-}
-
-/* Скидання налаштувань посилань та списків */
-
-a {
-  text-decoration: none;
-  color: currentColor;
-}
-ul {
-  list-style: none;
-}
-button {
-  padding: 0;
-  margin: 0;
-}
-img {
-  display: block;
-}
-
-/* скидаємо MARGIN де це потрібно */
-ul,
-p,
-h1,
-h2,
-h3 {
-  margin: 0;
-  padding: 0;
-}
-
-/* КОНТЕЙНЕР */
-
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-
-  outline: 1px solid red;
-}
-
-.section {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-}
-
 /* ХЕДЕР */
 
-.section.hero {
-  padding-top: 0;
-  padding-bottom: 40px;
-}
-
-.header {
+/* .header {
   position: fixed;
   top: 0;
   left: 0;
@@ -85,9 +11,9 @@ h3 {
 
   padding-top: 30px;
   padding-bottom: 30px;
-}
+} */
 
-.nav .link {
+/* .nav .link {
   display: block;
   color: var(--white-text-color);
   font-weight: 600;
@@ -103,9 +29,9 @@ h3 {
 .nav a:focus {
   color: var(--link-text-color);
   transform: scale(1.2);
-}
+} */
 
-.contacts .tel {
+/* .contacts .tel {
   display: flex;
   align-items: center;
 
@@ -123,18 +49,18 @@ h3 {
   padding-bottom: 30px;
 
   transition: color 250ms ease;
-}
-.contacts .tel:hover,
+} */
+/* .contacts .tel:hover,
 .contacts .tel:focus {
   color: var(--link-text-color);
-}
+} */
 
 /**
   |============================
   | Icon of the phone var.1
   |============================
 */
-.heart {
+/* .heart {
   position: absolute;
   top: -25px;
   left: 0;
@@ -144,8 +70,8 @@ h3 {
 
   opacity: 0;
   transition: transform 250ms ease, opacity 1000ms ease-in-out;
-}
-.phone {
+} */
+/* .phone {
   position: absolute;
   top: 50%;
   left: 0;
@@ -156,19 +82,19 @@ h3 {
   opacity: 1;
   transform: translateY(-50%);
   transition: transform 250ms ease, opacity 1000ms ease-in-out;
-}
+} */
 
-.tel:hover .heart {
+/* .tel:hover .heart {
   transform: translateY(50px);
   opacity: 1;
-}
+} */
 
-.tel:hover .phone {
+/* .tel:hover .phone {
   transform: translateY(50px);
   opacity: 0;
-}
+} */
 
-.contacts {
+/* .contacts {
   position: relative;
 
   display: flex;
@@ -177,61 +103,9 @@ h3 {
   padding-left: 40px;
 
   overflow: hidden;
-}
+} */
 
-/**
-  |============================
-  | Icon of the phone var.2
-  |============================
-*/
-/*
-.heart {
-  position: absolute;
-  top: 50%;
-  left: 0;
-
-  margin-right: 10px;
-  fill: currentColor;
-
-  opacity: 0;
-  transform: translateY(-50%);
-  transition: opacity 250ms linear;
-}
-.phone {
-  position: absolute;
-  top: 50%;
-  left: 0;
-
-  margin-right: 10px;
-  fill: currentColor;
-
-  opacity: 1;
-  transform: translateY(-50%);
-  transition: opacity 250ms linear;
-}
-
-.tel:hover .heart {
-  opacity: 1;
-}
-
-.tel:hover .phone {
-  opacity: 0;
-}
-
-.contacts {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-
-  padding-left: 40px;
-}
-*/
-/**
-  |============================
-*/
-
-.btn-booking {
+/* .btn-booking {
   display: block;
   padding: auto;
 
@@ -249,44 +123,43 @@ h3 {
   border: 1px solid var(--link-text-color);
   border-radius: 20px;
   transition: all 250ms ease;
-}
-.btn-booking:hover,
+} */
+/* .btn-booking:hover,
 .btn-booking:focus {
   background-color: rgb(255, 108, 0);
   box-shadow: -2px 1px 24px 6px rgba(255, 108, 0, 0.75);
 
   cursor: pointer;
-}
+} */
 
-.btn-booking:active {
+/* .btn-booking:active {
   background-color: rgb(255, 108, 0);
   box-shadow: -2px 1px 24px 6px rgba(255, 108, 0, 0.5) inset;
 
-  /* cursor: pointer; */
-}
+} */
 
 /* FLEX HEADER */
 
-.header-flex {
+/* .header-flex {
   display: flex;
   align-items: center;
-}
+} */
 
-.nav .list {
+/* .nav .list {
   display: flex;
 }
 
 .nav .list-item:not(:last-child) {
   margin-right: 30px;
-}
+} */
 
-.nav {
+/* .nav {
   margin-left: 70px;
-}
+} */
 
-.contacts {
+/* .contacts {
   margin-left: auto;
-}
+} */
 
 /**
   |============================
@@ -310,16 +183,16 @@ h3 {
   |============================
 */
 
-.main-title {
+/* .main-title {
   color: var(--white-text-color);
   font-family: "Raleway";
   font-weight: 700;
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
-}
+} */
 
-.uppertitle {
+/* .uppertitle {
   display: flex;
   align-items: center;
 
@@ -330,9 +203,9 @@ h3 {
   text-transform: uppercase;
 
   margin-bottom: 20px;
-}
+} */
 
-.uppertitle.dark-theme {
+/* .uppertitle.dark-theme {
   color: var(--secondary-text-color-alpha);
 }
 
@@ -354,16 +227,16 @@ h3 {
 }
 .uppertitle.dark-theme::before {
   background-color: var(--secondary-text-color-alpha);
-}
+} */
 
-.subtitle {
+/* .subtitle {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 
   margin-top: 20px;
-}
+} */
 
 .hero-left-side {
   width: 100px;
@@ -381,7 +254,7 @@ h3 {
 }
 .social-list.main > .list-item:first-child {
   display: flex;
-  /* flex-direction: column; */
+
   align-items: center;
 }
 
@@ -440,10 +313,10 @@ h3 {
   color: var(--secondary-text-color-alpha);
 }
 
-.hero .group {
+/* .hero .group {
   min-width: 510px;
   margin-left: 100px;
-}
+} */
 
 .hero .subtitle {
   color: var(--secondary-text-color);
@@ -474,7 +347,7 @@ h3 {
 
 /* FLEX HERO */
 
-.hero-group {
+/* .hero-group {
   padding-top: 252px;
   padding-bottom: 206px;
   padding-left: 100px;
@@ -482,7 +355,7 @@ h3 {
   flex-grow: 1;
 
   background-color: #191c2626;
-}
+} */
 .hero-group .list {
   align-self: flex-end;
   margin-left: auto;
@@ -499,18 +372,18 @@ h3 {
   width: 80px;
 }
 
-.hero-bg {
+/* .hero-bg {
   position: relative;
 
   margin-right: -15px;
 
   flex-grow: 1;
-  background-image: url(../images/background/Slider-main.jpg);
+  background-image: url(../images/background/Slider-main.jpg); */
 }
 
-.flex-side {
+/* .flex-side {
   display: flex;
-}
+} */
 
 .social-list .list-item:not(:last-child) {
   margin-right: 20px;
@@ -579,14 +452,11 @@ h3 {
   height: 445px;
   opacity: 0;
   transform: scalex(0);
-
   background-color: var(--secondary-text-color-alpha);
-
   
   pointer-events: none;
   transition: all 250ms ease-in-out;
 }
-
 .about .list-item:hover::before {
   opacity: 1;
  

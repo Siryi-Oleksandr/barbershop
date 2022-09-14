@@ -1,0 +1,19 @@
+.hero-group {
+  padding-top: 272px;
+  padding-bottom: 206px;
+  padding-left: 100px;
+
+  min-width: 510px;
+  flex-grow: 1;
+
+  background-color: #191c2626;
+}
+
+.hero-group__title {
+  color: $white-text-color;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+}

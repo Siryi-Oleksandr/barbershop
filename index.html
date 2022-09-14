@@ -44,7 +44,7 @@
     <!-- AOS animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- My CSS -->
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
    
@@ -54,33 +54,33 @@
        |============================
      -->
     <header class="header">
-      <div class="container header-flex">
+      <div class="container header__flex">
         <a class="logo" href=""
-          ><img src="./images/Logo.png" alt="logo barbershop"
+          ><img class="logo__img" src="./images/Logo.png" alt="logo barbershop"
         /></a>
         <nav class="nav">
-          <ul class="list">
-            <li class="list-item"><a class="link" href="#about">About</a></li>
-            <li class="list-item">
-              <a class="link" href="#prices">Services and prices</a>
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#prices">Services and prices</a>
             </li>
-            <li class="list-item"><a class="link" href="#team">Barbers</a></li>
-            <li class="list-item">
-              <a class="link" href="#contacts">Contacts</a>
+            <li class="nav__item"><a class="nav__link" href="#team">Barbers</a></li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
         <div class="contacts">
-          <a class="tel" href="tel:+380441111111">
-            <svg class="heart" width="20" height="20">
+          <a class="contacts__tel" href="tel:+380441111111">
+            <svg class="contacts__icon contacts__icon--heart" width="20" height="20">
               <use href="./images/sprite-3d.svg#heart"></use>
             </svg>
-            <svg class="phone" width="20" height="20">
+            <svg class="contacts__icon contacts__icon--phone" width="20" height="20">
               <use href="./images/sprite-3d.svg#phone"></use>
             </svg>
             <span>+38 044 111 11 11</span>
             </a>
-           <button class="btn btn-booking" type="button" data-modal-open>Online-booking</button>
+           <button class="button" type="button" data-modal-open>Online-booking</button>
         </div>
       </div>
     </header>
@@ -91,22 +91,21 @@
         |============================
       -->
 
-      <section class="section hero">
+      <section class="section-hero">
         <div class="container flex-side">
           <div class="hero-left-side">
-            <ul class="social-list main">
-            <li class="list-item">
+            <ul class="social-list  social-list--vertical">
+            <li class="social-list__item">
               <a
-                class="link"
+                class="social-list__link"
                 href="https://Instagram.com"
                 target="_blank"
                 rel="noreferrer noopener"
                 >Instagram</a>
             </li>
-
-            <li class="list-item">
+            <li class="social-list__item">
               <a
-                class="link"
+                class="social-list__link"
                 href="https://Youtube.com"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -115,31 +114,30 @@
             </li>
           </ul>
           </div>
-<div class="hero-bg">
-  <div class="hero-group">
-            <p class="uppertitle dark-theme">A hair salon for men in Kyiv</p>
-            <h1 class="main-title">BarberShop</h1>
-            <p class="subtitle">
-              We are experts in trendy men’s haircuts. <br />
-              We work quickly, carefully and with style.
-            </p>
+          <div class="hero-right-side">
+            <div class="hero-group">
+              <p class="uppertitle uppertitle--dark-theme">A hair salon for men in Kyiv</p>
+              <h1 class="hero-group__title">BarberShop</h1>
+              <p class="subtitle">
+                We are experts in trendy men’s haircuts. <br />
+                We work quickly, carefully and with style.
+              </p>
           </div>
 
-          <ul class="slider-list">
-            <li class="slider-item">
-              <button class="btn disabled" type="button">Back</button>
+          <ul class="slider">
+            <li class="slider__item">
+              <button class="slider__btn slider__btn--disabled" type="button">Back</button>
             </li>
-            <li class="slider-item">
-              <button class="btn" type="button">Forward</button>
+            <li class="slider__item">
+              <button class="slider__btn" type="button">Forward</button>
             </li>
           </ul>
           <ul class="slider-pagination">
-            <li class="item-pagination active"></li>
-            <li class="item-pagination"></li>
-            <li class="item-pagination"></li>
+            <li class="slider-pagination__item slider-pagination__item--active"></li>
+            <li class="slider-pagination__item"></li>
+            <li class="slider-pagination__item"></li>
           </ul>
-</div>
-          
+          </div>
         </div>
       </section>
    
@@ -744,10 +742,15 @@
          <button type="button" data-modal-close>Close</button>
         </div>
 
-
       </div>
 
     </main>
+
+    <!--
+      |============================
+      | add JS
+      |============================
+    -->
 
     <script src="./js/modal.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

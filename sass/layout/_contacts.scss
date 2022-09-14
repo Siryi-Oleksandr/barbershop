@@ -1,0 +1,75 @@
+.contacts {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding-left: 40px;
+  padding-right: 15px;
+
+  overflow: hidden;
+}
+
+.contacts__tel {
+  margin-right: 45px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  display: flex;
+  align-items: center;
+
+  color: $white-text-color;
+  fill: $white-text-color;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.15;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  transition: color 250ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $link-text-color;
+  }
+}
+
+// .contacts__icon {
+// }
+
+.contacts__icon--heart {
+  position: absolute;
+  top: -25px;
+  left: 0;
+
+  margin-right: 10px;
+  fill: currentColor;
+
+  opacity: 0;
+  transition: transform 250ms ease, opacity 250ms ease-in-out;
+
+  .contacts__tel:hover &,
+  .contacts__tel:focus & {
+    transform: translateY(55px);
+    opacity: 1;
+  }
+}
+
+.contacts__icon--phone {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  margin-right: 10px;
+  fill: currentColor;
+
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: transform 250ms ease, opacity 250ms ease-in-out;
+
+  .contacts__tel:hover &,
+  .contacts__tel:focus & {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+}
