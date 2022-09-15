@@ -4,8 +4,13 @@
   line-height: 1.17;
   letter-spacing: 0.05em;
   color: $title-text-color;
+  margin-bottom: 20px;
 }
 
 .section-title--dark-theme {
   color: $white-text-color;
+}
+
+.section-title--big-bottom {
+  margin-bottom: 44px;
 }
