@@ -1,0 +1,54 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 100px;
+  width: calc(100% / 2);
+}
+
+.contacts__address {
+  margin-bottom: 70px;
+  padding-top: 50px;
+
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  font-style: normal;
+  color: $secondary-text-color;
+}
+
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__item--bottom {
+  align-items: flex-start;
+}
+
+// .contacts__icon {
+// }
+
+.contacts__link {
+  display: inline-block;
+  margin-left: 16px;
+}
+
+// .contacts__item--center {
+// }
+
+// .contacts__group {
+// }
+
+.contacts__schedule {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: $secondary-text-color;
+}

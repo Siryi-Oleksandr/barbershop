@@ -1,18 +1,17 @@
 .section-hero {
-   
 }
 
 .flex-side {
-    display: flex;
+  display: flex;
 }
 
-.hero-left-side {}
+.hero-left-side {
+}
 
 .hero-right-side {
-    position: relative;
-    
-        flex-grow: 1;
-        background-image: url(../images/background/Slider-main.jpg);
-        background-size: cover;
-       
+  position: relative;
+
+  flex-grow: 1;
+  background-image: url(../images/background/Slider-main.jpg);
+  background-size: cover;
 }

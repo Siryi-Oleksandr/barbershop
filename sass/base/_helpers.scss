@@ -57,3 +57,19 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/**
+  |============================
+  | CARD-SET
+  |============================
+*/
+
+// .card-set {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: $indent;
+// }
+
+// .card-set__item {
+//   flex-basis: calc((100% - #{$indent} * (#{$items} - 1)) / #{$items});
+// }

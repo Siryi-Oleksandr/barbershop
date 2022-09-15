@@ -1,4 +1,4 @@
-.contacts {
+.header-contacts {
   position: relative;
 
   display: flex;
@@ -10,7 +10,7 @@
   overflow: hidden;
 }
 
-.contacts__tel {
+.header-contacts__tel {
   margin-right: 45px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -37,7 +37,7 @@
 // .contacts__icon {
 // }
 
-.contacts__icon--heart {
+.header-contacts__icon--heart {
   position: absolute;
   top: -25px;
   left: 0;
@@ -48,14 +48,14 @@
   opacity: 0;
   transition: transform 250ms ease, opacity 250ms ease-in-out;
 
-  .contacts__tel:hover &,
-  .contacts__tel:focus & {
+  .header-contacts__tel:hover &,
+  .header-contacts__tel:focus & {
     transform: translateY(55px);
     opacity: 1;
   }
 }
 
-.contacts__icon--phone {
+.header-contacts__icon--phone {
   position: absolute;
   top: 50%;
   left: 0;
@@ -67,8 +67,8 @@
   transform: translateY(-50%);
   transition: transform 250ms ease, opacity 250ms ease-in-out;
 
-  .contacts__tel:hover &,
-  .contacts__tel:focus & {
+  .header-contacts__tel:hover &,
+  .header-contacts__tel:focus & {
     transform: translateY(60px);
     opacity: 0;
   }

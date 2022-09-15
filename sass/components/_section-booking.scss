@@ -1,0 +1,16 @@
+.booking {
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    background-color: #191c26;
+    background-image: url(../images/background/contacts-bg.png);
+    background-position: calc((100% / 2) + 327px) 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.booking__flex {
+    display: flex;
+}

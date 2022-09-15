@@ -1,0 +1,11 @@
+.section-title {
+  font-family: "Raleway";
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+  color: $title-text-color;
+}
+
+.section-title--dark-theme {
+  color: $white-text-color;
+}

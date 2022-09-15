@@ -32,3 +32,13 @@
     background-color: $secondary-text-color-0_6;
   }
 }
+
+.uppertitle--white {
+  @extend .uppertitle;
+
+  color: $white-text-color;
+
+  &::before {
+      background-color: $secondary-text-color-0_6;
+    }
+}

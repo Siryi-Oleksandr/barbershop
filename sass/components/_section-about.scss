@@ -1,0 +1,29 @@
+// .about {}
+
+.about__flex {
+  display: flex;
+}
+
+.about__list {
+  display: flex;
+  gap: 30px;
+}
+
+.about__item {
+  overflow: hidden;
+}
+
+// .about__img {}
+
+.about__group {
+  max-width: 470px;
+  margin-left: 64px;
+}
+
+.about__desc {
+  margin-top: 20px;
+
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+}
