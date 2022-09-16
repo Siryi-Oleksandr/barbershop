@@ -710,45 +710,50 @@
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
           <form class="modal-form">
-            <strong>Leave your details, we will call you back</strong>
+            <strong class="modal-form__title">Leave your details, we will call you back</strong>
             <label class="modal-form__field">
-              <input class="modal-form__input" type="text" name="name" required placeholder=" ">
+              <input class="modal-form__input" type="text" name="name" required placeholder="Alex Gray">
               <span class="modal-form__label">Name</span>
               <svg class="modal-form__icon" width="22" height="22">
-                <use href=""></use>
+                <use class="icon-unchecked" href="./images/svg-sprite.svg#user-plus"></use>
+                <use class="icon-checked" href="./images/svg-sprite.svg#user-check"></use>
               </svg>
             </label>
 
             <label class="modal-form__field">
-              <input class="modal-form__input" type="tel" name="tel" placeholder=" ">
+              <input class="modal-form__input" type="tel" name="tel" placeholder="+380 99 999 99 99">
               <span class="modal-form__label">Phone</span>
               <svg class="modal-form__icon" width="22" height="22">
-                <use href=""></use>
+                <use class="icon-checked icon-checked--visible" href="./images/svg-sprite.svg#mobile"></use>
               </svg>
             </label>
 
             <label class="modal-form__field">
-              <input class="modal-form__input" type="email" name="email" required placeholder=" ">
+              <input class="modal-form__input" type="email" name="email" required placeholder="exemple@mail.com">
               <span class="modal-form__label">E-mail</span>
               <svg class="modal-form__icon" width="22" height="22">
-                <use href=""></use>
+                <use class="icon-checked icon-checked--visible" href="./images/svg-sprite.svg#mail"></use>
               </svg>
             </label>
 
             <label class="modal-form__field">
-              <span class="modal-form__label">Message</span>
+              <span class="modal-form__textarea">Message</span>
               <textarea name="message" rows="5" class="modal-form__message" placeholder="Enter your message"></textarea>
             </label>
 
             <label class="modal-form__agreement">
               <input class="modal-form__checkbox" type="checkbox" name="checkbox">
-              <svg class="modal-form__icon-check" width="22" height="22">
-                <use href=""></use>
+              <svg class="modal-form__icon--check" width="18" height="18">
+                <use class="checkbox-unchecked" href="./images/svg-sprite.svg#vector"></use>
+                <use class="checkbox-checked" href="./images/svg-sprite.svg#icon-check"></use>
               </svg>
               <span class="modal-form__agreement-text">I agree with the mailing and accept <a class="modal-form__link" href="">Agreement</a> </span>
             </label>
           </form>
-         <button class="button button--white-theme" type="button" data-modal-close>SEND</button>
+         <button class="button button--white-theme button--center" type="submit" >SEND</button>
+         <button class="btn-close" type="button" data-modal-close><svg class="btn-close__icon" width="22" height="22">
+                <use href="./images/svg-sprite.svg#close"></use>
+              </svg></button>
         </div>
 
       </div>
