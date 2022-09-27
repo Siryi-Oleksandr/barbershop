@@ -34,11 +34,13 @@
   }
 }
 
-
 @mixin flex($horizontal) {
   display: flex;
   justify-content: $horizontal;
   align-items: center;
 }
 
-
+@mixin section-padding($pt: 84px, $pb: 84px) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}

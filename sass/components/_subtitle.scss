@@ -16,3 +16,10 @@
   @extend .subtitle;
   color: $secondary-text-color;
 }
+
+.subtitle_benefits {
+  margin-bottom: 44px;
+
+  font-size: 18px;
+  line-height: calc(30 / 18);
+}

@@ -1,4 +1,11 @@
 .section {
-    padding-top: $section-padding;
-    padding-bottom: $section-padding;
+  @include section-padding;
+
+  @media screen and(min-width: 768px) {
+    @include section-padding(100px, 100px);
+  }
+
+  @media screen and(min-width: 1200px) {
+    @include section-padding(130px, 130px);
+  }
 }

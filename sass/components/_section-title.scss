@@ -18,8 +18,38 @@
 
 .section-title--dark-theme {
   color: $white-text-color;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin-bottom: 44px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: calc(47 / 40);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    margin-bottom: 44px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: calc(49 / 42);
+  }
+}
+
+.section-title--white-theme {
+  width: 100%;
+
+  font-size: 42px;
+  line-height: calc(49 / 42);
 }
 
 .section-title--big-bottom {
   margin-bottom: 44px;
+}
+
+.question-mark {
+  transform: rotate(180deg);
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
 }
