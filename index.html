@@ -30,10 +30,10 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <title>Barbershop</title>
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
-    />
+    /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -153,20 +153,30 @@
             <li class="about__item">
               
                 <img class="about__img"
-                src="./images/about/about-img-1.jpg"
-                alt="Mustache trim"
-                width="270"
-                height="445"
+                srcset="
+                    ./images/about/tablet/about-1.jpg    330w,
+                    ./images/about/tablet/about-1@2x.jpg 660w,
+                    ./images/about/desktop/about-1.jpg 270w,
+                    ./images/about/desktop/about-1@2x.jpg 540w
+                  "
+                  src="./images/about/tablet/about-1.jpg"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, 100vw"
+                alt="beard trim"
               />
               
             </li>
             <li class="about__item">
               <img class="about__img"
-                src="./images/about/about-img-2.jpg"
-                alt="Men’s haircut"
-                width="270"
-                height="445"
-              />
+                srcset="
+                    ./images/about/tablet/about-2.jpg    330w,
+                    ./images/about/tablet/about-2@2x.jpg 660w,
+                    ./images/about/desktop/about-2.jpg 270w,
+                    ./images/about/desktop/about-2@2x.jpg 540w
+                  "
+                  src="./images/about/tablet/about-2.jpg"
+                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, 100vw"
+                
+                alt="Men’s haircut" />
             </li>
           </ul>
           <div class="about__group">
@@ -174,7 +184,7 @@
             <h2 class="section-title">Best Barbershop in your city</h2>
             <p class="subtitle">
               If you want to add more confidence to your image, you should
-              definitely visit us.
+              <span class="about__add-word">definitely</span> visit us.
             </p>
 
             <p class="about__desc">

@@ -1,10 +1,19 @@
 .section-title {
+  width: 306px;
+
   font-family: "Raleway";
-  font-size: 42px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: calc(33 / 28);
   letter-spacing: 0.05em;
   color: $title-text-color;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    width: 500px;
+
+    font-size: 42px;
+    line-height: 1.17;
+  }
 }
 
 .section-title--dark-theme {
