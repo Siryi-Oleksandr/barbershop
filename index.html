@@ -302,21 +302,29 @@
       <!-- TEAM -->
 
       <section class="team section">
-        <div class="container">
+        <div class="container container--team-center">
           <p class="uppertitle" id="team">
             for true enjoyers of the atmosphere
           </p>
-          <h2 class="section-title section-title--big-bottom">Our barbers</h2>
+          <h2 class="section-title section-title--big-bottom section-title--white-theme">Our barbers</h2>
           <ul class="team__list card-set">
             <li class="team__item card-set__item">
               <div class="team__card">
                 <div class="team__card-front">
                   <img
                   class="img"
-                  src="./images/team/team-img1.jpg"
+                  srcset="
+                  ./images/team/desktop/team-1.jpg 370w,
+                  ./images/team/desktop/team-1@2x.jpg 740w,
+                  ./images/team/tablet/team-1.jpg 450w,
+                  ./images/team/tablet/team-1@2x.jpg 900w,
+                  ./images/team/mobile/team-1.jpg 418w,
+                  ./images/team/mobile/team-1@2x.jpg 836w;
+                  "
+                  src="./images/team/mobile/team-1.jpg"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
                   alt="John Smith"
-                  width="370"
-                  height="346"
+                 
                 />
                 </div>
                 <div class="team__title team__card-back">
@@ -384,14 +392,21 @@
                 <div class="team__card-front">
                   <img
                   class="img"
-                  src="./images/team/team-img3.jpg"
-                  alt="Alan Black"
-                  width="370"
-                  height="346"
+                  srcset="
+                  ./images/team/desktop/team-2.jpg 370w,
+                  ./images/team/desktop/team-2@2x.jpg 740w,
+                  ./images/team/tablet/team-2.jpg 450w,
+                  ./images/team/tablet/team-2@2x.jpg 900w,
+                  ./images/team/mobile/team-2.jpg 418w,
+                  ./images/team/mobile/team-2@2x.jpg 836w;
+                  "
+                  src="./images/team/mobile/team-2.jpg"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                  alt="Michele Doe"
                 />
                 </div>
                 <div class="team__title team__card-back">
-                  <h3 class="team__name">Alan Black</h3>
+                  <h3 class="team__name">Michele Doe</h3>
                   <p class="team__position">Extreme Barber</p>
                   <ul class="socials">
                     <li class="socials__item">
@@ -455,14 +470,21 @@
                 <div class="team__card-front">
                   <img
                   class="img"
-                  src="./images/team/team-img2.jpg"
-                  alt="Michele Doe"
-                  width="370"
-                  height="346"
+                  srcset="
+                  ./images/team/desktop/team-3.jpg 370w,
+                  ./images/team/desktop/team-3@2x.jpg 740w,
+                  ./images/team/tablet/team-3.jpg 450w,
+                  ./images/team/tablet/team-3@2x.jpg 900w,
+                  ./images/team/mobile/team-3.jpg 418w,
+                  ./images/team/mobile/team-3@2x.jpg 836w;
+                  "
+                  src="./images/team/mobile/team-3.jpg"
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (min-width: 480px) 418px, 100vw"
+                  alt="Alan Black"
                 />
                 </div>
                 <div class="team__title team__card-back">
-                  <h3 class="team__name">Michele Doe</h3>
+                  <h3 class="team__name">Alan Black</h3>
                   <p class="team__position">Extreme Barber</p>
                   <ul class="socials">
                     <li class="socials__item">
@@ -535,44 +557,69 @@
           <h2 class="section-title visually-hidden" >Our gallery</h2>
           <ul class="galery-list card-set">
 
-            <li class="galery__item card-set__item card-set__item--4" data-aos="fade-right" data-aos-duration="3000" data-aos-delay="0">
-                               <img
+            <li class="galery__item card-set__item card-set__item--4 card-set__item--2" data-aos="fade-right" data-aos-duration="3000" data-aos-delay="0">
+              <img
                 class="img"
-                src="./images/gallery/gallery-img-1.jpg"
+                src="./images/gallery/mobile/gallery-img-1.jp"
+                srcset="./images/gallery/mobile/gallery-img-1.jpg 418w,
+                ./images/gallery/mobile/gallery-img-1@2x.jpg 836w,
+                ./images/gallery/tablet/gallery-1.jpg 330w,
+                ./images/gallery/tablet/gallery-1@2x.jpg 660w,
+                ./images/gallery/desktop/gallery-img-1.jpg 270w,
+                ./images/gallery/desktop/gallery-img-1@2x.jpg 540w"
+                "
+               sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (min-width: 480px) 418px,  100vw"
                 alt="barber cuts a man"
-                width="270"
-                height="360"
               />
-                            
             </li>
 
             <li class="galery__item card-set__item card-set__item--4" data-aos="fade-right" data-aos-duration="3000" data-aos-delay="500">
               <img
                 class="img"
-                src="./images/gallery/gallery-img-2.jpg"
+                src="./images/gallery/mobile/gallery-img-2.jpg"
+                srcset="./images/gallery/mobile/gallery-img-2.jpg 418w,
+                ./images/gallery/mobile/gallery-img-2@2x.jpg 836w,
+                ./images/gallery/tablet/gallery-2.jpg 330w,
+                ./images/gallery/tablet/gallery-2@2x.jpg 660w,
+                ./images/gallery/desktop/gallery-img-2.jpg 270w,
+                ./images/gallery/desktop/gallery-img-2@2x.jpg 540w"
+                
+               sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (min-width: 480px) 418px,  100vw"
                 alt="barber shaves a man"
-                width="270"
-                height="360"
+                
               />              
             </li>
 
             <li class="galery__item card-set__item card-set__item--4" data-aos="fade-right" data-aos-duration="3000" data-aos-delay="1000">
               <img
                 class="img"
-                src="./images/gallery/gallery-img-3.jpg"
+                src="./images/gallery/mobile/gallery-img-3.jpg"
+                srcset="./images/gallery/mobile/gallery-img-3.jpg 418w,
+                ./images/gallery/mobile/gallery-img-3@2x.jpg 836w,
+                ./images/gallery/tablet/gallery-3.jpg 330w,
+                ./images/gallery/tablet/gallery-3@2x.jpg 660w,
+                ./images/gallery/desktop/gallery-img-3.jpg 270w,
+                ./images/gallery/desktop/gallery-img-3@2x.jpg 540w"
+                
+               sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (min-width: 480px) 418px,  100vw"
                 alt="barber wipes man's face with a towel"
-                width="270"
-                height="360"
+               
               />
             </li>
             
             <li class="galery__item card-set__item card-set__item--4" data-aos="fade-right" data-aos-duration="3000" data-aos-delay="1500">
               <img
                 class="img"
-                src="./images/gallery/gallery-img-4.jpg"
+                src="./images/gallery/mobile/gallery-img-4.jpg"
+                srcset="./images/gallery/mobile/gallery-img-4.jpg 418w,
+                ./images/gallery/mobile/gallery-img-4@2x.jpg 836w,
+                ./images/gallery/tablet/gallery-4.jpg 330w,
+                ./images/gallery/tablet/gallery-4@2x.jpg 660w,
+                ./images/gallery/desktop/gallery-img-4.jpg 270w,
+                ./images/gallery/desktop/gallery-img-4@2x.jpg 540w"
+               sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, (min-width: 480px) 418px,  100vw"
                 alt="barber cuts a man"
-                width="270"
-                height="360"
+               
               />
             </li>
 
