@@ -68,3 +68,14 @@
 .social-list__item--mobile {
   align-self: start;
 }
+
+.social-list__link--padding-null {
+  @media screen and (max-width: 767px) {
+    padding: 0;
+    align-self: flex-start;
+  }
+}
+
+.social-list__item--flex-start {
+  align-self: flex-start;
+}

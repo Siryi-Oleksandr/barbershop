@@ -687,10 +687,10 @@
 
       <!-- FORM for ONLINE-BOOKING  AND   CONTACTS -->
 
-      <div class="booking section">
+      <div class="booking ">
         <div class="booking__flex container">
-          <form class="form">   
-              <h2 class="section-title section-title--dark-theme" id="contacts">Online-booking</h2>    
+          <form class="form section">   
+              <h2 class="section-title section-title--dark-theme section-title--bottom-null" id="contacts">Online-booking</h2>    
 
               <div class="form__group">
                 <div class="form__field">
@@ -744,21 +744,21 @@
             <button class="button" type="submit">Send</button>
           </form>
 
-          <section class="contacts">
-            <h2 class="section-title section-title--dark-theme" id="contacts">Contacts</h2>
-            <address class="contacts__address">
+          <section class="contacts section">
+            <h2 class="section-title section-title--dark-theme section-title--center" id="contacts">Contacts</h2>
+            <div class="address-flex">
+              <address class="contacts__address">
               <ul class="contacts__list">
                 <li class="contacts__item contacts__item--bottom">
                   <svg class="contacts__icon" width="24" height="24">
                     <use href="./images/svg-sprite.svg#icon-map-pin"></use>
                   </svg>
                   <a
-                    class="contacts__link"
+                    class="contacts__link contacts__link--adress-mobile"
                     href="https://goo.gl/maps/wuicScCzC82bpD2R9"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >st. Vasilkovaya, 7A <br />
-                    Kiev, 08132</a
+                    >st. Vasilkovaya, 7A Kiev, 08132</a
                   >
                 </li>
                 <li class="contacts__item contacts__item--center">
@@ -771,7 +771,7 @@
                   <svg class="contacts__icon" width="24" height="24">
                     <use href="./images/svg-sprite.svg#icon-mail"></use>
                   </svg>
-                  <a class="contacts__link" href="mailto:barbershop@email.com"
+                  <a class="contacts__link contacts__link--underline" href="mailto:barbershop@email.com"
                     >barbershop@email.com</a
                   >
                 </li>
@@ -785,6 +785,7 @@
                 <time datetime="22:00">22:00</time>
               </p>
             </div>
+            </div>
           </section>
         </div>
       </div>
@@ -794,18 +795,18 @@
         <div class="container footer__flex">
           <p class="copyright">&#169; Copyright 2020</p>
           <ul class="social-list">
-            <li class="social-list__item">
+            <li class="social-list__item social-list__item--flex-start">
               <a
-                class="social-list__link"
+                class="social-list__link social-list__link--padding-null"
                 href="https://Instagram.com"
                 target="_blank"
                 rel="noreferrer noopener"
                 >Instagram</a
               >
             </li>
-            <li class="social-list__item">
+            <li class="social-list__item social-list__item--flex-start">
               <a
-                class="social-list__link"
+                class="social-list__link social-list__link--padding-null"
                 href="https://Youtube.com"
                 target="_blank"
                 rel="noreferrer noopener"

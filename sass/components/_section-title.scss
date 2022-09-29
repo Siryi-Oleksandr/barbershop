@@ -47,9 +47,19 @@
   margin-bottom: 44px;
 }
 
+.section-title--bottom-null {
+  margin-bottom: 0;
+}
+
 .question-mark {
   transform: rotate(180deg);
   @media screen and (min-width: 1200px) {
     display: none;
+  }
+}
+
+.section-title--center {
+  @media screen and (max-width: 767px) {
+    text-align: center;
   }
 }
