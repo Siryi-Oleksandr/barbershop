@@ -1,18 +1,15 @@
-.booking {
-  @media screen and (min-width: 1200px) {
-    width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #191c26;
-    background-image: url(../images/background/contacts-bg.png);
-    background-position: calc((100% / 2) + 327px) 0;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+.form__flex {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
 }
 
-.booking__flex {
+.booking-flex {
   @media screen and (min-width: 1200px) {
     display: flex;
   }
+}
+
+.booking-flex__item {
+  flex-basis: calc(100% / 2);
 }

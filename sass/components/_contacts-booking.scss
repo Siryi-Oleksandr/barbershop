@@ -1,12 +1,18 @@
 .contacts {
-  margin: -1px -30px;
-  padding-left: 30px;
-  padding-right: 30px;
   background-color: #191c26;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (max-width: 1199px) {
+    margin-top: -1px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   @media screen and (max-width: 480px) {
     background-image: url(../images/background/mobile/contacts-bg@1x_sm.png);
-    background-size: cover;
+    // background-size: cover;
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -16,19 +22,20 @@
   }
   // Tablet screen
   @media screen and (min-width: 481px) {
-    background-image: url(../../images/background/desktop/contacts-bg-lg-@1x.png);
-    background-size: cover;
+    background-image: url(../images/background/tablet/contacts-bg@1x_md.png);
+    // background-size: cover;
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/background/desktop/contacts-bg-lg-@2x.pngg);
+      background-image: url(../images/background/tablet/contacts-bg-lg-@2x.png);
     }
   }
 
   // Desktop screen
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 1200px) {
     background-image: url(../images/background/desktop/contacts-bg-lg-@1x.png);
+    margin-left: -1px;
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -36,9 +43,6 @@
       background-image: url(../images/background/desktop/contacts-bg-lg-@2x.png);
     }
   }
-  // display: flex;
-  // flex-direction: column;
-  // align-items: flex-start;
 }
 
 .contacts__address {
@@ -101,7 +105,7 @@
 }
 
 .contacts__link--underline {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     text-decoration: underline;
   }
 }
@@ -118,8 +122,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 100px;
-    width: calc(100% / 2);
+    // padding-left: 100px;
+    // width: calc(100% / 2 + 30px);
   }
 
   .contacts__address {

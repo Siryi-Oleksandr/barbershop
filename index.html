@@ -207,32 +207,32 @@
         <div class="about__flex container">
           <ul class="about__list">
             <li class="about__item">
-              
-                <img class="about__img"
-                srcset="
-                    ./images/about/tablet/about-1.jpg    330w,
-                    ./images/about/tablet/about-1@2x.jpg 660w,
-                    ./images/about/desktop/about-1.jpg 270w,
-                    ./images/about/desktop/about-1@2x.jpg 540w
-                  "
-                  src="./images/about/tablet/about-1.jpg"
-                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, 100vw"
+              <picture>
+                <!-- Desktop -->
+                <source media="(min-width: 1200px)" srcset="./images/about/desktop/about-1.jpg 1x, ./images/about/desktop/about-2@2x.jpg 2x">
+                <!-- Tablet -->
+                <source media="(min-width: 768px)" srcset="./images/about/tablet/about-1.jpg 1x, ./images/about/tablet/about-2@2x.jpg 2x">
+
+              <img class="about__img"
+                src="./images/about/tablet/about-1.jpg"
                 alt="beard trim"
               />
-              
+              </picture>
+                
             </li>
             <li class="about__item">
+              <picture>
+                <!-- Desktop -->
+                <source media="(min-width: 1200px)" srcset="./images/about/desktop/about-2.jpg 1x, ./images/about/desktop/about-2@2x.jpg 2x">
+                <!-- Tablet -->
+                <source media="(min-width: 768px)" srcset="./images/about/tablet/about-2.jpg 1x, ./images/about/tablet/about-2@2x.jpg 2x">
+
               <img class="about__img"
-                srcset="
-                    ./images/about/tablet/about-2.jpg    330w,
-                    ./images/about/tablet/about-2@2x.jpg 660w,
-                    ./images/about/desktop/about-2.jpg 270w,
-                    ./images/about/desktop/about-2@2x.jpg 540w
-                  "
                   src="./images/about/tablet/about-2.jpg"
-                  sizes="(min-width: 1200px) 270px, (min-width: 768px) 330px, 100vw"
-                
-                alt="Men’s haircut" />
+                  alt="Men’s haircut" />
+
+              </picture>
+              
             </li>
           </ul>
           <div class="about__group">
@@ -613,7 +613,8 @@
           <h2 class="section-title visually-hidden" >Our gallery</h2>
           <ul class="galery-list card-set">
 
-            <li class="galery__item card-set__item card-set__item--4 card-set__item--2" data-aos="fade-right" data-aos-duration="3000" data-aos-delay="0">
+            <li class="galery__item card-set__item card-set__item--4 card-set__item--2" >
+<!-- data-aos="fade-right" data-aos-duration="3000" data-aos-delay="0" -->
               <img
                 class="img"
                 
@@ -630,7 +631,7 @@
               />
             </li>
 
-            <li class="galery__item card-set__item card-set__item--4" data-aos="fade-right" data-aos-duration="3000" data-aos-delay="500">
+            <li class="galery__item card-set__item card-set__item--4" >
               <img
                 class="img"
                 
@@ -647,7 +648,7 @@
               />              
             </li>
 
-            <li class="galery__item card-set__item card-set__item--4" data-aos="fade-right" data-aos-duration="3000" data-aos-delay="1000">
+            <li class="galery__item card-set__item card-set__item--4" >
               <img
                 class="img"
                 
@@ -664,7 +665,7 @@
               />
             </li>
             
-            <li class="galery__item card-set__item card-set__item--4" data-aos="fade-right" data-aos-duration="3000" data-aos-delay="1500">
+            <li class="galery__item card-set__item card-set__item--4" >
               <img
                 class="img"
                 
@@ -687,10 +688,10 @@
 
       <!-- FORM for ONLINE-BOOKING  AND   CONTACTS -->
 
-      <div class="booking ">
-        <div class="booking__flex container">
-          <form class="form section">   
-              <h2 class="section-title section-title--dark-theme section-title--bottom-null" id="contacts">Online-booking</h2>    
+            <div class="booking-flex">
+<form class="form section booking-flex__item">   
+  <div class="container container--booking form__flex">
+    <h2 class="section-title section-title--dark-theme section-title--bottom-null" id="contacts">Online-booking</h2>    
 
               <div class="form__group">
                 <div class="form__field">
@@ -740,12 +741,14 @@
                                
               </div>
 
-
             <button class="button" type="submit">Send</button>
-          </form>
+          
+  </div>
+              </form>
 
-          <section class="contacts section">
-            <h2 class="section-title section-title--dark-theme section-title--center" id="contacts">Contacts</h2>
+      <section class="contacts section booking-flex__item">
+           <div class="container container--booking">
+             <h2 class="section-title section-title--dark-theme section-title--center" id="contacts">Contacts</h2>
             <div class="address-flex">
               <address class="contacts__address">
               <ul class="contacts__list">
@@ -786,9 +789,10 @@
               </p>
             </div>
             </div>
+           </div>
           </section>
-        </div>
-      </div>
+            </div>
+
 
       <!-- Footer -->
       <footer class="footer">

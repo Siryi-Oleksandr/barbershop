@@ -436,13 +436,13 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
   outline: 1px solid red;
 }
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    width: 448px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -456,6 +456,14 @@ body {
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container--booking {
+    width: 600px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -587,7 +595,6 @@ body {
         -ms-flex-align: center;
             align-items: center;
     margin-left: auto;
-    padding-left: 40px;
     padding-right: 15px;
     overflow: hidden;
   }
@@ -712,11 +719,14 @@ body {
   }
 }
 
+.section-hero {
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+}
 @media screen and (max-width: 480px) {
   .section-hero {
-    margin: 0 auto;
     background-image: url(../images/background/mobile/hero-bg-sm-@1x.jpg);
-    background-size: cover;
   }
 }
 @media screen and (max-width: 480px) and (min-device-pixel-ratio: 2), screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 480px) and (min-resolution: 192dpi), screen and (max-width: 480px) and (min-resolution: 2dppx) {
@@ -743,13 +753,21 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .hero-right-side {
+    margin: 0 -15px;
+    padding: 0 15px;
+  }
+}
+@media screen and (min-width: 768px) {
   .hero-right-side {
     background-image: url(../images/background/tablet/hero-bg-md-@1x.jpg);
     background-size: cover;
+    margin-right: -15px;
+    padding-right: 15px;
   }
 }
-@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero-right-side {
     background-image: url(../images/background/tablet/hero-bg-md-@2x.jpg);
   }
@@ -1020,7 +1038,7 @@ body {
   .slider-pagination {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 30px;
   }
   .slider-pagination__item {
     margin-left: auto;
@@ -1192,7 +1210,6 @@ body {
 }
 
 .price {
-  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
   background-color: #111319;
@@ -1598,16 +1615,13 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 30px;
   }
 }
 
-@media screen and (min-width: 768px) {
-  .card-set__item--2 {
-    -ms-flex-preferred-size: calc((100% - 30px * (2 - 1)) / 2);
-        flex-basis: calc((100% - 30px * (2 - 1)) / 2);
-  }
-}
 @media screen and (min-width: 1200px) {
   .card-set__item {
     -ms-flex-preferred-size: calc((100% - 30px * (3 - 1)) / 3);
@@ -1655,32 +1669,7 @@ body {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .booking {
-    width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #191c26;
-    background-image: url(../images/background/contacts-bg.png);
-    background-position: calc(50% + 327px) 0;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .booking__flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.form__group {
-  width: 100%;
-}
-
-.form {
+.form__flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1689,19 +1678,46 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 44px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .booking-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.booking-flex__item {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.form__group {
+  width: 100%;
+}
+
+.form {
   background-color: #191c26;
 }
 @media screen and (max-width: 1199px) {
   .form {
-    margin: 0 -30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 44px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1894,19 +1910,6 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
-  .form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 44px;
-    width: calc(50% - 50px);
-    padding-left: 50px;
-    padding-right: 40px;
-  }
   .form__group {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -1972,107 +1975,23 @@ body {
   .form__comment:focus {
     border-bottom-color: #ffffff;
   }
-  .form__label-comment {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.3636363636;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(157, 164, 189, 0.4);
-    -webkit-transition: color 250ms linear, -webkit-transform 500ms linear;
-    transition: color 250ms linear, -webkit-transform 500ms linear;
-    transition: transform 500ms linear, color 250ms linear;
-    transition: transform 500ms linear, color 250ms linear, -webkit-transform 500ms linear;
-  }
-  .form__comment:focus + .form__label-comment {
-    color: #ffffff;
-    -webkit-transform: translateY(-50px) rotate(360deg);
-            transform: translateY(-50px) rotate(360deg);
-  }
-  .message-title {
-    font-weight: 600;
-    font-size: 11px;
-    line-height: 1.36;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-  .form__checkbox {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 10px;
-    margin: 0;
-  }
-  .form__field-messager {
-    position: relative;
-  }
-  .form__input-checkbox {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    -webkit-clip-path: inset(100%);
-            clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  .form__icon-checkbox {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    width: 1em;
-    height: 1em;
-    border: 2px solid #9da4bd;
-    border-radius: 4px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-  }
-  .form__input-checkbox:checked + .form__icon-checkbox {
-    background-image: url(../images/social/check.svg);
-    background-color: #2196f3;
-    border-color: transparent;
-    background-origin: border-box;
-  }
-  .form__input-checkbox:disabled + .form__icon-checkbox {
-    background-color: #9da4bd;
-  }
-  .form__label-checkbox {
-    position: relative;
-    padding-left: 30px;
-    font-size: 18px;
-    line-height: 1.67;
-    letter-spacing: 0.02em;
-    color: rgba(157, 164, 189, 0.4);
-    -webkit-transition: color 250ms ease-in-out;
-    transition: color 250ms ease-in-out;
-  }
-  .form__input-checkbox:checked ~ .form__label-checkbox {
-    color: #fff;
-  }
 }
 .contacts {
-  margin: -1px -30px;
-  padding-left: 30px;
-  padding-right: 30px;
   background-color: #191c26;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 1199px) {
+  .contacts {
+    margin-top: -1px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media screen and (max-width: 480px) {
   .contacts {
     background-image: url(../images/background/mobile/contacts-bg@1x_sm.png);
-    background-size: cover;
   }
 }
 @media screen and (max-width: 480px) and (min-device-pixel-ratio: 2), screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 480px) and (min-resolution: 192dpi), screen and (max-width: 480px) and (min-resolution: 2dppx) {
@@ -2082,21 +2001,21 @@ body {
 }
 @media screen and (min-width: 481px) {
   .contacts {
-    background-image: url(../../images/background/desktop/contacts-bg-lg-@1x.png);
-    background-size: cover;
+    background-image: url(../images/background/tablet/contacts-bg@1x_md.png);
   }
 }
 @media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
   .contacts {
-    background-image: url(../images/background/desktop/contacts-bg-lg-@2x.pngg);
+    background-image: url(../images/background/tablet/contacts-bg-lg-@2x.png);
   }
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1200px) {
   .contacts {
     background-image: url(../images/background/desktop/contacts-bg-lg-@1x.png);
+    margin-left: -1px;
   }
 }
-@media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .contacts {
     background-image: url(../images/background/desktop/contacts-bg-lg-@2x.png);
   }
@@ -2177,7 +2096,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .contacts__link--underline {
     text-decoration: underline;
   }
@@ -2202,8 +2121,6 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding-left: 100px;
-    width: 50%;
   }
   .contacts__address {
     margin-bottom: 70px;
