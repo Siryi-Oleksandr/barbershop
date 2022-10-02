@@ -24,7 +24,11 @@
   padding-left: 15px;
   padding-right: 15px;
 
-  outline: 1px solid red;
+  // outline: 1px solid red;
+
+  @media screen and (max-width: 319px) {
+    width: 320px;
+  }
 
   @media screen and (min-width: 480px) {
     width: 448px;

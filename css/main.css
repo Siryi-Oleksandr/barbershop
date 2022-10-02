@@ -438,7 +438,11 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid red;
+}
+@media screen and (max-width: 319px) {
+  .container {
+    width: 320px;
+  }
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -1210,6 +1214,7 @@ body {
 }
 
 .price {
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
   background-color: #111319;
