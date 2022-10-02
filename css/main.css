@@ -724,12 +724,12 @@ body {
   background-size: cover;
   background-position: center;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .section-hero {
     background-image: url(../images/background/mobile/hero-bg-sm-@1x.jpg);
   }
 }
-@media screen and (max-width: 480px) and (min-device-pixel-ratio: 2), screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 480px) and (min-resolution: 192dpi), screen and (max-width: 480px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .section-hero {
     background-image: url(../images/background/mobile/hero-bg-sm-@2x.jpg);
   }
@@ -1682,9 +1682,12 @@ body {
 
 @media screen and (min-width: 1200px) {
   .booking-flex {
+    max-width: 1280px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
